@@ -3,7 +3,7 @@ import Container from "@/components/ui/Container";
 const links = [
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
-  { label: "Research", href: "#research" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 

@@ -2,6 +2,6 @@ export const routes = {
   home: "/",
   projects: "#projects",
   experience: "#experience",
-  research: "#research",
+  education: "#education",
   contact: "#contact",
 };
