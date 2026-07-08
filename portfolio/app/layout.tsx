@@ -1,8 +1,14 @@
 import "./globals.css";
+import { Geist, Geist_Mono } from "next/font/google";
+
+const geist = Geist({
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Siddhartha Kumar",
-  description: "Portfolio",
+  description:
+    "Software Engineer | Full-Stack & Cloud | Android | AI/ML | Founder @ KridAstra",
 };
 
 export default function RootLayout({
