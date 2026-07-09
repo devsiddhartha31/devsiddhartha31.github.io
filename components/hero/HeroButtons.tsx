@@ -1,21 +1,24 @@
 import Link from "next/link";
 import Button from "@/components/ui/Button";
+import { ArrowRight, Download } from "lucide-react";
 
 import { profile } from "@/data/profile";
 import { routes } from "@/data/routes";
 
 export default function HeroButtons() {
   return (
-    <div className="mt-10 flex flex-wrap gap-4">
+    <div className="mt-8 flex flex-wrap items-center gap-4">
 
-      <Link href={routes.projects} target="_blank">
-        <Button variant="secondary">
+      <Link href={routes.projects}>
+        <Button variant="primary">
           Explore My Work
+          <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </Link>
 
-      <Link href={profile.resume} target="_blank">
-        <Button variant="primary">
+      <Link href={profile.resume} target="_blank" download>
+        <Button variant="secondary">
+          <Download className="mr-2 h-4 w-4" />
           Download Resume
         </Button>
       </Link>
