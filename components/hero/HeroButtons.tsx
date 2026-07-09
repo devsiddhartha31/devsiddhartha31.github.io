@@ -15,7 +15,7 @@ export default function HeroButtons() {
       </Link>
 
       <Link href={profile.resume} target="_blank">
-        <Button variant="secondary">
+        <Button variant="primary">
           Download Resume
         </Button>
       </Link>

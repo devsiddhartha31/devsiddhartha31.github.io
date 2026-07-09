@@ -1,5 +1,5 @@
 export const profile = {
-  name: "Siddhartha Kumar",
+  name: "Siddhartha Kumar Tiwari",
 
   headline:
   "Software Engineer • Full-Stack • Cloud • Android • AI/ML",
@@ -9,8 +9,7 @@ export const profile = {
 
   focus: [
     "Medical AI Research",
-    "Full-Stack Engineering",
-    "Android Development",
+    "Scalable Backend Systems",
     "Building KridAstra",
   ],
 

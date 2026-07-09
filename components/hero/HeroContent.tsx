@@ -1,6 +1,7 @@
 import HeroButtons from "./HeroButtons";
 import HeroSocial from "./HeroSocial";
 import { profile } from "@/data/profile";
+import SkillBadge from "@/components/skills/SkillBadge";
 
 export default function HeroContent() {
   return (
@@ -30,11 +31,12 @@ export default function HeroContent() {
 
       </h1>
 
-      <p className="mt-8 text-xl text-zinc-300">
-
-        {profile.headline}
-
-      </p>
+      {/* Info */}
+      <div className="mt-8 flex flex-wrap gap-2">
+        {profile.focus.map((item) => (
+          <SkillBadge key={item} skill={item} />
+        ))}
+      </div>
 
       <p className="mt-6 max-w-xl text-xl text-zinc-300 leading-9">
 
