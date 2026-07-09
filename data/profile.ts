@@ -19,5 +19,5 @@ export const profile = {
 
   email: "devsiddhartha31@gmail.com",
 
-  resume: "/resume.pdf",
+  resume: "/res/CV.pdf",
 };
