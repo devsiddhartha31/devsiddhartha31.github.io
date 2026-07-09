@@ -10,7 +10,7 @@ export default function HeroButtons() {
 
       <Link href={routes.projects} target="_blank">
         <Button variant="secondary">
-          View Projects
+          Explore My Work
         </Button>
       </Link>
 

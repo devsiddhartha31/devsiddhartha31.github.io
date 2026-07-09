@@ -4,24 +4,28 @@ import { profile } from "@/data/profile";
 
 export default function HeroContent() {
   return (
-    <div>
+    <div className="flex flex-col justify-center max-w-xl">
 
       <div className="mb-8 inline-flex items-center rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2">
 
         <div className="mr-2 h-2 w-2 rounded-full bg-green-400" />
 
         <span className="text-sm">
-          Available for opportunities
+          Available for Opportunities
         </span>
 
       </div>
 
-      <h1 className="text-5xl font-black leading-tight lg:text-7xl">
+      <h1 className="max-w-4xl text-2xl lg:text-4xl xl:text-5xl font-black leading-[0.95] tracking-tight">
 
         Engineering software
-        <br />
+
+        <span className="block bg-gradient-to-r from-indigo-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">
+
         that solves
-        <br />
+
+        </span>
+
         real-world problems.
 
       </h1>
@@ -32,15 +36,13 @@ export default function HeroContent() {
 
       </p>
 
-      <p className="mt-6 max-w-2xl text-zinc-400 leading-8">
+      <p className="mt-6 max-w-xl text-xl text-zinc-300 leading-9">
 
         {profile.description}
 
       </p>
 
       <HeroButtons />
-
-      <HeroSocial />
 
     </div>
   );
