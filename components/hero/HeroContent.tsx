@@ -4,9 +4,9 @@ import SkillBadge from "@/components/skills/SkillBadge";
 
 export default function HeroContent() {
   return (
-    <div className="flex flex-col justify-center max-w-xl">
+    <div className="flex max-w-xl flex-col items-start justify-center">
 
-      <div className="mb-8 inline-flex items-center rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2">
+      <div className="mb-2 inline-flex items-center rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2">
 
         <div className="mr-2 h-2 w-2 rounded-full bg-green-400" />
 
@@ -16,7 +16,7 @@ export default function HeroContent() {
 
       </div>
 
-      <h1 className="max-w-4xl text-2xl lg:text-4xl xl:text-5xl font-black leading-[0.95] tracking-tight">
+      <h1 className="mt-4 max-w-4xl text-2xl lg:text-4xl xl:text-5xl font-black leading-[1.1] tracking-tight">
 
         Engineering software
 
