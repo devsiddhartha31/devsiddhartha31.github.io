@@ -1,5 +1,4 @@
 import HeroButtons from "./HeroButtons";
-import HeroSocial from "./HeroSocial";
 import { profile } from "@/data/profile";
 import SkillBadge from "@/components/skills/SkillBadge";
 
@@ -38,7 +37,7 @@ export default function HeroContent() {
         ))}
       </div>
 
-      <p className="mt-6 max-w-xl text-xl text-zinc-300 leading-9">
+      <p className="mt-6 max-w-xl text-lg text-zinc-300 leading-8">
 
         {profile.description}
 

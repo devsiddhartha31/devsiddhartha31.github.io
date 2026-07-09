@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { profile } from "@/data/profile";
 import SkillBadge from "@/components/skills/SkillBadge";
+import HeroSocial from "./HeroSocial";
 
 export default function HeroImage() {
   return (
     <div className="flex justify-center lg:justify-end">
-      <div className="relative w-full max-w-sm">
+      <div className="relative w-full max-w-md xl:max-w-lg">
         {/* Glow */}
         <div className="absolute inset-0 rounded-[2rem] bg-indigo-500/20 blur-3xl" />
 
@@ -15,11 +16,13 @@ export default function HeroImage() {
           <div className="relative h-80 overflow-hidden">
             <Image
               src="/images/profile/profile.jpg"
-              alt="Siddhartha Kumar"
+              alt={profile.name}
               fill
               priority
-              className="object-cover"
+              className="object-cover transition-transform duration-500 hover:scale-105"
             />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/30 via-transparent to-transparent" />
           </div>
 
           {/* Info */}
@@ -29,9 +32,11 @@ export default function HeroImage() {
               {profile.name}
             </h3>
 
-            <p className="mt-2 text-sm text-zinc-400">
+            <p className="mt-2 text-sm text-zinc-400 whitespace-nowrap overflow-hidden text-ellipsis">
               {profile.headline}
             </p>
+
+            <HeroSocial />
 
           </div>
         </div>
