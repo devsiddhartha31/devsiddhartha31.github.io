@@ -8,7 +8,10 @@ export default function HeroContent() {
 
       <div className="mb-2 inline-flex items-center rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2">
 
-        <div className="mr-2 h-2 w-2 rounded-full bg-green-400" />
+        <div className="relative mr-2 flex h-2.5 w-2.5 items-center justify-center">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
+        </div>
 
         <span className="text-sm">
           Available for Opportunities
