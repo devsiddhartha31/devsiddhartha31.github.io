@@ -9,7 +9,7 @@ import { social } from "@/data/social";
 
 export default function HeroSocial() {
   return (
-    <div className="mt-10 flex items-center gap-5">
+    <div className="mt-4 flex items-center gap-5">
       <Link
         href={social.github}
         target="_blank"

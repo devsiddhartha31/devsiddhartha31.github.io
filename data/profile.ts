@@ -1,11 +1,17 @@
 export const profile = {
-  name: "Siddhartha Kumar",
+  name: "Siddhartha Kumar Tiwari",
 
   headline:
   "Software Engineer • Full-Stack • Cloud • Android • AI/ML",
 
   description:
-  "I build production-ready software across web, cloud, Android, and artificial intelligence. My work combines scalable engineering with AI research to create practical solutions for real-world problems.",
+  "Building scalable software, cloud applications, Android apps, and AI solutions for real-world problems.",
+
+  focus: [
+    "Medical AI Research",
+    "Scalable Backend Systems",
+    "Building KridAstra",
+  ],
 
   github: "https://github.com/devsiddhartha31",
 
@@ -13,5 +19,5 @@ export const profile = {
 
   email: "devsiddhartha31@gmail.com",
 
-  resume: "/resume.pdf",
+  resume: "/res/CV.pdf",
 };

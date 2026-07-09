@@ -1,46 +1,46 @@
 import Image from "next/image";
+import { profile } from "@/data/profile";
+import SkillBadge from "@/components/skills/SkillBadge";
+import HeroSocial from "./HeroSocial";
 
 export default function HeroImage() {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center lg:justify-end">
+      <div className="relative w-full max-w-md xl:max-w-lg">
+        {/* Glow */}
+        <div className="absolute inset-0 rounded-[2rem] bg-indigo-500/20 blur-3xl" />
 
-      <div className="w-full max-w-md rounded-3xl border border-zinc-800 bg-zinc-900 p-6 shadow-2xl">
+        {/* Card */}
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900/80 backdrop-blur-xl shadow-2xl">
+          {/* Image */}
+          <div className="relative h-80 overflow-hidden">
+            <Image
+              src="/images/profile/profile.jpg"
+              alt={profile.name}
+              fill
+              priority
+              className="object-cover transition-transform duration-500 hover:scale-105"
+            />
 
-        <div className="overflow-hidden rounded-2xl">
+            <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/30 via-transparent to-transparent" />
+          </div>
 
-          <Image
-            src="/images/profile/profile.jpg"
-            alt="Siddhartha Kumar"
-            width={500}
-            height={600}
-            className="h-auto w-full"
-            priority
-          />
+          {/* Info */}
+          <div className="p-6">
 
+            <h3 className="text-2xl font-bold">
+              {profile.name}
+            </h3>
+
+            <p className="mt-2 text-sm text-zinc-400 whitespace-nowrap overflow-hidden text-ellipsis">
+              {profile.headline}
+            </p>
+
+            <HeroSocial />
+
+          </div>
         </div>
-
-        <div className="mt-8">
-
-          <h3 className="text-lg font-semibold">
-            Current Focus
-          </h3>
-
-          <ul className="mt-4 space-y-3 text-zinc-400">
-
-            <li>🧠 Medical AI Research</li>
-
-            <li>💻 Full-Stack Engineering</li>
-
-            <li>📱 Android Development</li>
-
-            <li>🚀 Building KridAstra</li>
-
-          </ul>
-
-        </div>
-
       </div>
-
     </div>
   );
 }
