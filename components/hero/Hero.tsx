@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       <GradientBackground />
       <Container>
-        <div className="flex min-h-[calc(100vh-72px)] items-center py-16">
+        <div className="flex min-h-[calc(100vh)] items-center py-22">
           <div className="grid w-full gap-12 xl:gap-20 lg:grid-cols-2">
             <HeroContent />
 

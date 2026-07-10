@@ -9,7 +9,7 @@ import { navbar } from "@/data/navbar";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-zinc-950/80 backdrop-blur-xl">
+    <header className="fixed top-0 z-50 w-full border-b border-white/5 bg-zinc-950/80 backdrop-blur-xl">
       <Container>
         <nav className="flex h-16 items-center justify-between">
           <Link

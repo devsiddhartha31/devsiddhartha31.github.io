@@ -13,7 +13,7 @@ export default function HeroImage() {
         {/* Card */}
         <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900/80 backdrop-blur-xl shadow-2xl">
           {/* Image */}
-          <div className="relative h-80 overflow-hidden">
+          <div className="relative h-100 overflow-hidden">
             <Image
               src="/images/profile/profile.jpg"
               alt={profile.name}
