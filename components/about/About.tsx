@@ -1,8 +1,11 @@
 import Container from "@/components/ui/Container";
+import Section from "@/components/ui/Section";
 import SectionTitle from "@/components/ui/SectionTitle";
-import Section from "@/components/ui/Section"
 
 import { about } from "@/data/about";
+
+import ImpactGrid from "./ImpactGrid";
+import TrustedCompanies from "./TrustedCompanies";
 
 export default function About() {
   return (
@@ -11,18 +14,12 @@ export default function About() {
 
         <SectionTitle
           title={about.title}
+          subtitle={about.subtitle}
         />
 
-        <div className="max-w-3xl space-y-6">
-          {about.description.map((paragraph) => (
-            <p
-              key={paragraph}
-              className="text-lg leading-8 text-zinc-400"
-            >
-              {paragraph}
-            </p>
-          ))}
-        </div>
+        <ImpactGrid />
+
+        <TrustedCompanies />
 
       </Container>
     </Section>
