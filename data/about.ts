@@ -11,9 +11,9 @@ export const about: About = {
       id: 1,
       value: "100+",
       title: "Clients Served",
-      subtitle: "Across Independent projects since 2022",
+      subtitle: "Across different domains",
       icon: "users",
-      size: "large",
+      size: "span-c2-r1",
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ export const about: About = {
       title: "Enterprise Clients",
       subtitle: "Delivered production-grade software",
       icon: "building",
-      size: "small",
+      size: "normal",
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ export const about: About = {
       title: "Business Solutions",
       subtitle: "Hospitality, education, retail & more",
       icon: "rocket",
-      size: "small",
+      size: "normal",
     },
     {
       id: 4,
@@ -37,7 +37,15 @@ export const about: About = {
       title: "Medical AI Research",
       subtitle: "Computer Vision & Foundation Models",
       icon: "brain",
-      size: "medium",
+      size: "normal",
+    },
+    {
+      id: 5,
+      value: "4+",
+      title: "Years of Experience",
+      subtitle: "Building production-ready software",
+      icon: "experience",
+      size: "normal",
     },
   ],
 };

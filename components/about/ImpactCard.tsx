@@ -3,6 +3,7 @@ import {
   Building2,
   Rocket,
   Users,
+  Briefcase,
 } from "lucide-react";
 
 import { AboutHighlight } from "@/types/about";
@@ -13,6 +14,7 @@ const iconMap = {
   building: Building2,
   brain: Brain,
   rocket: Rocket,
+  experience: Briefcase,
 };
 
 interface Props {
@@ -26,8 +28,8 @@ export default function ImpactCard({ item }: Props) {
     <article
       className={cn(
         "group rounded-3xl border border-zinc-800 bg-zinc-900/60 p-8 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500/40 hover:shadow-xl hover:shadow-indigo-500/10",
-        item.size === "large" && "lg:col-span-2",
-        item.size === "medium" && "lg:col-span-2"
+        item.size === "span-c2-r1" && "lg:col-span-2",
+        item.size === "span-c1-r2" && "lg:row-span-2"
       )}
     >
       <Icon
