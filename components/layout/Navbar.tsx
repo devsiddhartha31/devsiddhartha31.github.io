@@ -14,9 +14,9 @@ export default function Navbar() {
         <nav className="flex h-16 items-center justify-between">
           <Link
             href={routes.home}
-            className="flex items-center gap-3"
+            className="group flex items-center gap-3"
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 font-bold text-white">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 font-bold text-white transition-transform duration-300 group-hover:rotate-3 group-hover:scale-105">
               {navbar.logo}
             </div>
 
