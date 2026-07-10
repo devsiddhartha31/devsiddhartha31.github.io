@@ -1,8 +1,4 @@
-export interface NavigationItem {
-  id: string;
-  name: string;
-  href: string;
-}
+import { NavigationItem } from "@/types/navigation";
 
 export const navigation: NavigationItem[] = [
   {
@@ -16,9 +12,9 @@ export const navigation: NavigationItem[] = [
     href: "#experience",
   },
   {
-    id: "research",
-    name: "Research",
-    href: "#research",
+    id: "education",
+    name: "Education",
+    href: "#education",
   },
   {
     id: "contact",
