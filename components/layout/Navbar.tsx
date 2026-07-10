@@ -5,6 +5,7 @@ import Button from "@/components/ui/Button";
 
 import { navigation } from "@/data/navigation";
 import { routes } from "@/data/routes";
+import { navbar } from "@/data/navbar";
 
 export default function Navbar() {
   return (
@@ -16,16 +17,16 @@ export default function Navbar() {
             className="flex items-center gap-3"
           >
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 font-bold text-white">
-              SK
+              {navbar.logo}
             </div>
 
             <div className="hidden sm:block">
               <p className="font-semibold">
-                Siddhartha
+                {navbar.heading}
               </p>
 
               <p className="text-xs tracking-wide text-zinc-500">
-                Software Engineer
+                {navbar.sub_heading}
               </p>
             </div>
           </Link>
