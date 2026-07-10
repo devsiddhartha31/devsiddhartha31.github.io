@@ -5,7 +5,7 @@ export const profile = {
   "Software Engineer • Full-Stack • Cloud • Android • AI/ML",
 
   description:
-  "Building scalable software, cloud applications, Android apps, and AI solutions for real-world problems.",
+  "Building scalable software across web, cloud, Android, and AI while transforming complex ideas into reliable, high-quality products. Passionate about solving real-world problems through thoughtful engineering, clean architecture, and continuous innovation.",
 
   focus: [
     "Medical AI Research",
