@@ -1,49 +1,117 @@
 import Image from "next/image";
+
+import {
+  ArrowUpRight
+} from "lucide-react";
+
+import {
+  IconBrandGithub
+} from "@tabler/icons-react";
+
 import { Project } from "@/types/project";
+
+import SkillBadge from "@/components/skills/SkillBadge";
 
 interface Props {
   project: Project;
 }
 
-export default function ProjectCard({ project }: Props) {
+export default function ProjectCard({
+  project,
+}: Props) {
   return (
-    <article className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 transition hover:border-indigo-500/40">
+    <article
+      className="
+        group
+        overflow-hidden
+        rounded-3xl
+        border
+        border-zinc-800
+        bg-zinc-900/60
+        backdrop-blur-md
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:border-indigo-500/40
+      "
+    >
 
-      <div className="relative aspect-video bg-zinc-800">
+      {/* Image */}
+
+      <div className="relative aspect-video overflow-hidden">
+
         <Image
           src={project.image}
           alt={project.title}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
+
       </div>
+
+      {/* Content */}
 
       <div className="p-6">
 
-        <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-xs text-indigo-400">
-          {project.category}
-        </span>
+        <div className="flex items-center justify-between">
 
-        <h3 className="mt-4 text-2xl font-semibold">
+          <span
+            className="
+              rounded-full
+              bg-indigo-500/10
+              px-3
+              py-1
+              text-xs
+              font-semibold
+              uppercase
+              tracking-wider
+              text-indigo-400
+            "
+          >
+            {project.status}
+          </span>
+
+          <div className="flex gap-3">
+
+            {project.github && (
+              <Github
+                size={18}
+                className="cursor-pointer text-zinc-500 transition hover:text-white"
+              />
+            )}
+
+            {project.demo && (
+              <ArrowUpRight
+                size={18}
+                className="cursor-pointer text-zinc-500 transition hover:text-white"
+              />
+            )}
+
+          </div>
+
+        </div>
+
+        <h3 className="mt-5 text-2xl font-bold">
           {project.title}
         </h3>
 
-        <p className="mt-4 leading-7 text-zinc-400">
+        <p className="mt-4 text-sm leading-7 text-zinc-400">
           {project.description}
         </p>
 
         <div className="mt-6 flex flex-wrap gap-2">
+
           {project.technologies.map((tech) => (
-            <span
+            <SkillBadge
               key={tech}
-              className="rounded-full bg-zinc-800 px-3 py-1 text-sm"
-            >
-              {tech}
-            </span>
+              skill={tech}
+            />
           ))}
+
         </div>
 
       </div>
+
     </article>
   );
 }
