@@ -37,7 +37,7 @@ export const projects: Project[] = [
       "LoRA",
     ],
     image: "/images/projects/ddh.png",
-    featured: false,
+    featured: true,
   },
 
   {
@@ -110,7 +110,7 @@ export const projects: Project[] = [
       "Room",
     ],
     image: "/images/projects/ddh.png",
-    featured: false,
+    featured: true,
   },
 
   {
@@ -127,7 +127,7 @@ export const projects: Project[] = [
       "SQLite",
     ],
     image: "/images/projects/ddh.png",
-    featured: false,
+    featured: true,
   },
 
   {
@@ -144,7 +144,7 @@ export const projects: Project[] = [
       "Networking",
     ],
     image: "/images/projects/ddh.png",
-    featured: false,
+    featured: true,
   },
 
   {
@@ -161,7 +161,7 @@ export const projects: Project[] = [
       "Game Development",
     ],
     image: "/images/projects/ddh.png",
-    featured: false,
+    featured: true,
   },
 
   {
@@ -178,6 +178,6 @@ export const projects: Project[] = [
       "3D Graphics",
     ],
     image: "/images/projects/ddh.png",
-    featured: false,
+    featured: true,
   },
 ];

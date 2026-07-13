@@ -12,27 +12,27 @@ import ProjectCarousel from "./ProjectCarousel";
 import ProjectFilters from "./ProjectFilters";
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeStatusFilter, setActiveStatusFilter] = useState("All");
 
-  const filters = useMemo(
+  const featuredProjects = projects.filter((project) => project.featured);
+
+  const statusFilters = useMemo(
     () => [
       "All",
       ...new Set(
-        projects
-          .filter((project) => project.featured)
-          .map((project) => project.category)
+        featuredProjects
+          .map((project) => project.status)
       ),
     ],
     []
   );
 
   const filteredProjects =
-    activeFilter === "All"
-      ? projects.filter((project) => project.featured)
-      : projects.filter(
+    activeStatusFilter === "All"
+      ? featuredProjects
+      : featuredProjects.filter(
           (project) =>
-            project.featured &&
-            project.category.toLowerCase() === activeFilter.toLowerCase()
+            project.status.toLowerCase() === activeStatusFilter.toLowerCase()
         );
 
   return (
@@ -45,9 +45,9 @@ export default function Projects() {
         />
 
         <ProjectFilters
-          filters={filters}
-          active={activeFilter}
-          onChange={setActiveFilter}
+          filters={statusFilters}
+          active={activeStatusFilter}
+          onChange={setActiveStatusFilter}
         />
 
         <ProjectCarousel

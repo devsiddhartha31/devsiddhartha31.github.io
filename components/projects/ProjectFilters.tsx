@@ -6,6 +6,9 @@ interface Props {
   onChange: (filter: string) => void;
 }
 
+const formatLabel = (value: string) =>
+  value.charAt(0).toUpperCase() + value.slice(1);
+
 export default function ProjectFilters({
   filters,
   active,
@@ -32,7 +35,7 @@ export default function ProjectFilters({
             }
           `}
         >
-          {filter}
+          {formatLabel(filter)}
         </button>
       ))}
     </div>
