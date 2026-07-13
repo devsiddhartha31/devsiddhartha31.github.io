@@ -20,14 +20,14 @@ export default function ProjectCarousel({
     loop: true,
   });
 
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [currentSlideIndex, setCurrentSlide] = useState(0);
   const slideCount = projects.length;
 
   useEffect(() => {
     if (!emblaApi) return;
 
     const updateCarousel = () => {
-      setSelectedIndex(emblaApi.selectedScrollSnap());
+      setCurrentSlide(emblaApi.selectedScrollSnap())
     };
 
     updateCarousel();
@@ -64,30 +64,18 @@ export default function ProjectCarousel({
 
           <button
             onClick={() => emblaApi?.scrollPrev()}
-            className="rounded-full border border-zinc-700 p-3 transition hover:border-indigo-500 disabled:cursor-not-allowed disabled:opacity-40"
+            className="rounded-full border border-zinc-700 p-3 text-zinc-400 transition-all hover:border-indigo-500 hover:text-white"
           >
             <ChevronLeft size={18} />
           </button>
 
-          <div className="flex items-center gap-2">
-            <div className="flex items-center gap-2">
-              {Array.from({ length: slideCount }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => emblaApi?.scrollTo(index)}
-                  className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
-                    index === selectedIndex
-                      ? "bg-indigo-400 w-6"
-                      : "bg-zinc-600 hover:bg-zinc-400"
-                  }`}
-                />
-              ))}
-            </div>
+          <div className="min-w-14 text-center text-sm font-medium tabular-nums text-zinc-400">
+            {currentSlideIndex + 1} / {slideCount}
           </div>
 
           <button
             onClick={() => emblaApi?.scrollNext()}
-            className="rounded-full border border-zinc-700 p-3 transition hover:border-indigo-500 disabled:cursor-not-allowed disabled:opacity-40"
+            className="rounded-full border border-zinc-700 p-3 text-zinc-400 transition-all hover:border-indigo-500 hover:text-white"
           >
             <ChevronRight size={18} />
           </button>

@@ -8,8 +8,8 @@ export type ProjectCategory =
 
 export type ProjectStatus =
   | "enterprise"
-  | "research"
   | "production"
+  | "research"
   | "opensource"
   | "personal"
   | "ongoing";

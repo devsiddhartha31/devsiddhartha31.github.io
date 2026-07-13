@@ -12,8 +12,7 @@ import ProjectCarousel from "./ProjectCarousel";
 import ProjectFilters from "./ProjectFilters";
 
 export default function Projects() {
-  const [activeStatusFilter, setActiveStatusFilter] = useState("All");
-
+  const [activeStatusFilter, setActiveStatusFilter] = useState("enterprise");
   const featuredProjects = projects.filter((project) => project.featured);
 
   const statusFilters = useMemo(
@@ -41,7 +40,7 @@ export default function Projects() {
 
         <SectionTitle
           title="Featured Projects"
-          subtitle="A selection of projects across AI, web, Android, desktop applications, libraries, and game development."
+          subtitle="A collection of software projects spanning enterprise systems, production applications, research, open-source libraries, and personal innovations."
         />
 
         <ProjectFilters
