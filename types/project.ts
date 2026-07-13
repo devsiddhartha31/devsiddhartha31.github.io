@@ -1,24 +1,39 @@
+export type ProjectCategory =
+  | "ai"
+  | "web"
+  | "android"
+  | "desktop"
+  | "game"
+  | "library";
+
+export type ProjectStatus =
+  | "enterprise"
+  | "research"
+  | "production"
+  | "opensource"
+  | "personal"
+  | "ongoing";
+
 export interface Project {
   id: number;
 
   title: string;
 
+  slug: string;
+
   description: string;
 
-  image: string;
+  category: ProjectCategory;
+
+  status: ProjectStatus;
 
   technologies: string[];
 
+  image: string;
+
+  featured: boolean;
+
   github?: string;
 
-  live?: string;
-
-  featured?: boolean;
-
-  category:
-  | "AI"
-  | "Web"
-  | "Android"
-  | "Backend"
-  | "Research";
+  demo?: string;
 }
