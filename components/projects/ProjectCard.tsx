@@ -1,20 +1,28 @@
 import Image from "next/image";
-
+import Link from "next/link";
 import {
-  ArrowUpRight
+  ArrowUpRight,
 } from "lucide-react";
 
 import {
-  IconBrandGithub
-} from "@tabler/icons-react";
+  BrandIconGithub,
+} from "lucide-react";
 
 import { Project } from "@/types/project";
-
 import SkillBadge from "@/components/skills/SkillBadge";
 
 interface Props {
   project: Project;
 }
+
+const statusColors = {
+  research: "bg-violet-500/10 text-violet-400",
+  enterprise: "bg-sky-500/10 text-sky-400",
+  production: "bg-green-500/10 text-green-400",
+  personal: "bg-zinc-700/30 text-zinc-300",
+  opensource: "bg-orange-500/10 text-orange-400",
+  ongoing: "bg-amber-500/10 text-amber-400",
+};
 
 export default function ProjectCard({
   project,
@@ -23,95 +31,112 @@ export default function ProjectCard({
     <article
       className="
         group
+        flex
+        h-full
+        flex-col
         overflow-hidden
         rounded-3xl
         border
-        border-zinc-800
+        border-white/5
         bg-zinc-900/60
-        backdrop-blur-md
+        backdrop-blur-xl
         transition-all
         duration-300
-        hover:-translate-y-1
-        hover:border-indigo-500/40
+        hover:-translate-y-2
+        hover:border-indigo-500/30
+        hover:shadow-2xl
+        hover:shadow-indigo-500/10
       "
     >
-
       {/* Image */}
 
       <div className="relative aspect-video overflow-hidden">
-
         <Image
           src={project.image}
           alt={project.title}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition duration-500 group-hover:scale-110"
         />
-
       </div>
 
       {/* Content */}
 
-      <div className="p-6">
+      <div className="flex flex-1 flex-col p-6">
+
+        {/* Status */}
 
         <div className="flex items-center justify-between">
 
           <span
-            className="
-              rounded-full
-              bg-indigo-500/10
-              px-3
-              py-1
-              text-xs
-              font-semibold
-              uppercase
-              tracking-wider
-              text-indigo-400
-            "
+            className={`rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider ${
+              statusColors[project.status]
+            }`}
           >
             {project.status}
           </span>
 
-          <div className="flex gap-3">
-
-            {project.github && (
-              <Github
-                size={18}
-                className="cursor-pointer text-zinc-500 transition hover:text-white"
-              />
-            )}
-
-            {project.demo && (
-              <ArrowUpRight
-                size={18}
-                className="cursor-pointer text-zinc-500 transition hover:text-white"
-              />
-            )}
-
-          </div>
-
         </div>
+
+        {/* Title */}
 
         <h3 className="mt-5 text-2xl font-bold">
           {project.title}
         </h3>
 
-        <p className="mt-4 text-sm leading-7 text-zinc-400">
+        {/* Description */}
+
+        <p className="mt-4 flex-1 text-sm leading-7 text-zinc-400 line-clamp-3">
           {project.description}
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-2">
+        {/* Tech */}
 
-          {project.technologies.map((tech) => (
+        <div className="mt-6 flex flex-wrap gap-2">
+          {project.technologies.slice(0, 4).map((tech) => (
             <SkillBadge
               key={tech}
               skill={tech}
             />
           ))}
 
+          {project.technologies.length > 4 && (
+            <SkillBadge
+              skill={`+${project.technologies.length - 4}`}
+            />
+          )}
+        </div>
+
+        {/* Footer */}
+
+        <div className="mt-8 flex items-center gap-4">
+
+          {project.github && (
+            <Link
+              href={project.github}
+              target="_blank"
+            >
+              <Github
+                size={18}
+                className="text-zinc-500 transition hover:text-white"
+              />
+            </Link>
+          )}
+
+          {project.demo && (
+            <Link
+              href={project.demo}
+              target="_blank"
+              className="flex items-center gap-2 text-sm font-medium text-indigo-400 transition hover:text-indigo-300"
+            >
+              Live Demo
+
+              <ArrowUpRight size={16} />
+            </Link>
+          )}
+
         </div>
 
       </div>
-
     </article>
   );
 }
