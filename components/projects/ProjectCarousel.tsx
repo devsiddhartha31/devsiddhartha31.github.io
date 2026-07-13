@@ -17,28 +17,27 @@ export default function ProjectCarousel({
 }: Props) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
-    loop: false,
+    loop: true,
   });
 
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const slideCount = projects.length;
 
   useEffect(() => {
     if (!emblaApi) return;
 
-    const updateButtons = () => {
-      setCanScrollPrev(emblaApi.canScrollPrev());
-      setCanScrollNext(emblaApi.canScrollNext());
+    const updateCarousel = () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap());
     };
 
-    updateButtons();
+    updateCarousel();
 
-    emblaApi.on("select", updateButtons);
-    emblaApi.on("reInit", updateButtons);
+    emblaApi.on("select", updateCarousel);
+    emblaApi.on("reInit", updateCarousel);
 
     return () => {
-      emblaApi.off("select", updateButtons);
-      emblaApi.off("reInit", updateButtons);
+      emblaApi.off("select", updateCarousel);
+      emblaApi.off("reInit", updateCarousel);
     };
   }, [emblaApi]);
 
@@ -60,23 +59,39 @@ export default function ProjectCarousel({
         </div>
       </div>
 
-      {(canScrollPrev || canScrollNext) && (
-        <div className="mt-8 flex justify-center gap-4">
+      {(slideCount > 3) && (
+        <div className="mt-8 flex items-center justify-center gap-4">
+
           <button
             onClick={() => emblaApi?.scrollPrev()}
-            disabled={!canScrollPrev}
             className="rounded-full border border-zinc-700 p-3 transition hover:border-indigo-500 disabled:cursor-not-allowed disabled:opacity-40"
           >
             <ChevronLeft size={18} />
           </button>
 
+          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2">
+              {Array.from({ length: slideCount }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => emblaApi?.scrollTo(index)}
+                  className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
+                    index === selectedIndex
+                      ? "bg-indigo-400 w-6"
+                      : "bg-zinc-600 hover:bg-zinc-400"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
           <button
             onClick={() => emblaApi?.scrollNext()}
-            disabled={!canScrollNext}
             className="rounded-full border border-zinc-700 p-3 transition hover:border-indigo-500 disabled:cursor-not-allowed disabled:opacity-40"
           >
             <ChevronRight size={18} />
           </button>
+
         </div>
       )}
     </div>
