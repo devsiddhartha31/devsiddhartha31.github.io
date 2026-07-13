@@ -3,7 +3,9 @@ import Section from "@/components/ui/Section";
 import SectionTitle from "@/components/ui/SectionTitle";
 
 import { projects } from "@/data/projects";
-import ProjectCard from "./ProjectCard";
+
+import ProjectFilters from "./ProjectFilters";
+import ProjectGrid from "./ProjectGrid";
 
 export default function Projects() {
   return (
@@ -12,19 +14,14 @@ export default function Projects() {
 
         <SectionTitle
           title="Featured Projects"
-          subtitle="A selection of software, AI, and mobile applications I've built."
+          subtitle="A selection of projects across AI, enterprise software, Android, desktop applications, libraries, and game development."
         />
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {projects
-            .filter((project) => project.featured)
-            .map((project) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-              />
-            ))}
-        </div>
+        <ProjectFilters />
+
+        <ProjectGrid
+          projects={projects.filter((project) => project.featured)}
+        />
 
       </Container>
     </Section>
