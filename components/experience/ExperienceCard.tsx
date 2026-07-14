@@ -46,9 +46,24 @@ export function formatDuration(experience: ExperienceItem) {
     (end.getMonth() - start.getMonth()) +
     1;
 
+  const splitMonths = (totalMonths % 12)
+  const years = (totalMonths - splitMonths) / 12
+
+  const durationParts = [];
+
+  if (years > 0) {
+    durationParts.push(`${years} ${years === 1 ? "yr" : "yrs"}`);
+  }
+
+  if (splitMonths > 0) {
+    durationParts.push(`${splitMonths} ${splitMonths === 1 ? "mo" : "mos"}`);
+  }
+
+  const duration = durationParts.join(" ");
+
   return `${formatter.format(start)} – ${
     experience.endDate ? formatter.format(end) : "Present"
-  } • ${totalMonths} ${totalMonths === 1 ? "mo" : "mos"}`;
+  }${duration ? ` (${duration})` : ""}`;
 }
 
 export default function ExperienceCard({
