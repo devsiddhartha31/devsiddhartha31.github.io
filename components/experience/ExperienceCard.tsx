@@ -1,5 +1,10 @@
 import SkillBadge from "@/components/skills/SkillBadge";
 
+import {
+  Calendar,
+  MapPin,
+} from "lucide-react";
+
 import { ExperienceItem } from "@/types/experience";
 
 interface Props {
@@ -71,11 +76,20 @@ export default function ExperienceCard({
 
       </div>
 
-      {/* Duration */}
+      {/* Duration and location */}
+      <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-zinc-500">
 
-      <p className="mt-6 text-sm text-zinc-500">
-        {experience.duration} • {experience.location}
-      </p>
+        <div className="flex items-center gap-2">
+          <Calendar size={16} />
+          <span>{experience.duration}</span>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <MapPin size={16} />
+          <span>{experience.location}</span>
+        </div>
+
+      </div>
 
       {/* Description */}
 
