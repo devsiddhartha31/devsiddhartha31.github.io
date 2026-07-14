@@ -4,6 +4,7 @@ export const experiences: ExperienceItem[] = [
   {
     id: 1,
     company: "KridAstra",
+    logo: "/images/companies/kridastra.png",
     role: "Founder & Software Engineer",
     employmentType: "fullTime",
     workMode: "hybrid",
@@ -26,6 +27,7 @@ export const experiences: ExperienceItem[] = [
   {
     id: 2,
     company: "Moonglade Consultancy",
+    logo: "/images/companies/moonglade_communication.jpg",
     role: "Software Engineer (Full Stack)",
     employmentType: "contract",
     workMode: "remote",

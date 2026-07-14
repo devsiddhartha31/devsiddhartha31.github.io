@@ -1,6 +1,7 @@
 export interface ExperienceItem {
   id: number;
   company: string;
+  logo: string;
   role: string;
   employmentType: string;
   workMode: string;

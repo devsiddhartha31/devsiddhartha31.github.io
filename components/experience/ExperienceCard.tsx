@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SkillBadge from "@/components/skills/SkillBadge";
 
 import {
@@ -101,9 +102,19 @@ export default function ExperienceCard({
 
         <div className="flex items-center gap-4">
 
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 font-bold text-white">
-            {companyInitials}
-          </div>
+          {experience.logo ? (
+            <Image
+              src={experience.logo}
+              alt={experience.company}
+              width={48}
+              height={48}
+              className="h-12 w-12 rounded-xl object-contain"
+            />
+          ) : (
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 font-bold text-white">
+              {companyInitials}
+            </div>
+          )}
 
           <div>
 
