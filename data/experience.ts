@@ -50,7 +50,6 @@ export const experiences: ExperienceItem[] = [
       "Express.js",
       "TypeScript",
       "Node.js",
-      "Next.js",
       "PostgreSQL",
       "Prisma",
       "Docker",,
