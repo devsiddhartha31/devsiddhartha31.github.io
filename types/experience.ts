@@ -3,6 +3,7 @@ export interface ExperienceItem {
   company: string;
   role: string;
   employmentType: string;
+  workMode: string;
   duration: string;
   location: string;
   description: string;

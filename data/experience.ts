@@ -6,6 +6,7 @@ export const experiences: ExperienceItem[] = [
     company: "KridAstra",
     role: "Founder & Software Engineer",
     employmentType: "fullTime",
+    workMode: "hybrid",
     duration: "Nov 2022 - Present",
     location: "India",
     description:
@@ -23,29 +24,12 @@ export const experiences: ExperienceItem[] = [
   },
   {
     id: 2,
-    company: "Independent Healthcare Startup",
-    role: "AI Research Engineer",
-    employmentType: "fullTime",
-    duration: "Feb 2026 - July 2026 (6 Months)",
-    location: "Germany - Remote",
-    description:
-      "Conducted AI research for developmental dysplasia of the hip (DDH) detection using pediatric pelvic X-rays. Developed deep learning and computer vision models, evaluated foundation models, and implemented explainable AI techniques for medical imaging.",
-    technologies: [
-      "Python",
-      "PyTorch",
-      "Computer Vision",
-      "Deep Learning",
-      "Medical Imaging",
-      "AI",
-    ],
-  },
-  {
-    id: 3,
     company: "Moonglade Consultancy",
     role: "Software Engineer (Full Stack)",
     employmentType: "contract",
-    duration: "Sept 2023 - Contractual Partnership",
-    location: "India - Remote",
+    workMode: "remote",
+    duration: "Sept 2023 - Present",
+    location: "India",
     description:
       "Part of a creative, fast-paced team at Moonglade, where I contribute to the planning, development, and optimization of diverse software projects.",
     technologies: [
@@ -59,6 +43,25 @@ export const experiences: ExperienceItem[] = [
       "AWS",
       "Cloudflare",
       "DigitalOcean",
+    ],
+  },
+  {
+    id: 3,
+    company: "Independent Healthcare Startup",
+    role: "AI Research Engineer",
+    employmentType: "fullTime",
+    workMode: "remote",
+    duration: "Feb 2026 - July 2026 (6 Months)",
+    location: "Germany",
+    description:
+      "Conducted AI research for developmental dysplasia of the hip (DDH) detection using pediatric pelvic X-rays. Developed deep learning and computer vision models, evaluated foundation models, and implemented explainable AI techniques for medical imaging.",
+    technologies: [
+      "Python",
+      "PyTorch",
+      "Computer Vision",
+      "Deep Learning",
+      "Medical Imaging",
+      "AI",
     ],
   },
 ];
