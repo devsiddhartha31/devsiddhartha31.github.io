@@ -3,6 +3,12 @@ import SkillBadge from "@/components/skills/SkillBadge";
 import {
   Calendar,
   MapPin,
+  Crown,
+  BriefcaseBusiness,
+  Clock3,
+  FileSignature,
+  Laptop,
+  GraduationCap
 } from "lucide-react";
 
 import { ExperienceItem } from "@/types/experience";
@@ -10,6 +16,15 @@ import { ExperienceItem } from "@/types/experience";
 interface Props {
   experience: ExperienceItem;
 }
+
+const employmentTypeIcons = {
+  founder: Crown,
+  fullTime: BriefcaseBusiness,
+  partTime: Clock3,
+  contract: FileSignature,
+  freelance: Laptop,
+  internship: GraduationCap,
+};
 
 export default function ExperienceCard({
   experience,
@@ -20,6 +35,8 @@ export default function ExperienceCard({
     .join("")
     .slice(0, 2)
     .toUpperCase();
+
+  const Icon = employmentTypeIcons[experience.employmentType];
 
   return (
     <article
@@ -78,6 +95,11 @@ export default function ExperienceCard({
 
       {/* Duration and location */}
       <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-zinc-500">
+
+        <div className="flex items-center gap-2">
+          <Icon size={16} />
+          <span>{experience.employmentType}</span>
+        </div>
 
         <div className="flex items-center gap-2">
           <Calendar size={16} />

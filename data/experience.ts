@@ -5,6 +5,7 @@ export const experiences: ExperienceItem[] = [
     id: 1,
     company: "KridAstra",
     role: "Founder & Software Engineer",
+    employmentType: "fullTime",
     duration: "Nov 2022 - Present",
     location: "India",
     description:
@@ -24,6 +25,7 @@ export const experiences: ExperienceItem[] = [
     id: 2,
     company: "Independent Healthcare Startup",
     role: "AI Research Engineer",
+    employmentType: "fullTime",
     duration: "Feb 2026 - July 2026 (6 Months)",
     location: "Germany - Remote",
     description:
@@ -41,6 +43,7 @@ export const experiences: ExperienceItem[] = [
     id: 3,
     company: "Moonglade Consultancy",
     role: "Software Engineer (Full Stack)",
+    employmentType: "contract",
     duration: "Sept 2023 - Contractual Partnership",
     location: "India - Remote",
     description:
