@@ -26,6 +26,9 @@ const employmentTypeIcons = {
   internship: GraduationCap,
 };
 
+const formatEmploymentType = (type: string) =>
+  type.replace(/([A-Z])/g, " $1").replace(/^./, (char) => char.toUpperCase());
+
 export default function ExperienceCard({
   experience,
 }: Props) {
@@ -98,7 +101,7 @@ export default function ExperienceCard({
 
         <div className="flex items-center gap-2">
           <Icon size={16} />
-          <span>{experience.employmentType}</span>
+          <span>{formatEmploymentType(experience.employmentType)}</span>
         </div>
 
         <div className="flex items-center gap-2">
