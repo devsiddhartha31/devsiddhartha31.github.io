@@ -19,7 +19,7 @@ interface Props {
   experience: ExperienceItem;
 }
 
-const employmentTypeIcons = {
+const employmentTypeMap = {
   founder: Crown,
   fullTime: BriefcaseBusiness,
   partTime: Clock3,
@@ -77,7 +77,7 @@ export default function ExperienceCard({
     .slice(0, 2)
     .toUpperCase();
 
-  const Icon = employmentTypeIcons[experience.employmentType];
+  const Icon = employmentTypeMap[experience.employmentType];
 
   return (
     <article

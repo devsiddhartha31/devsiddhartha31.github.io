@@ -9,7 +9,6 @@ export const experiences: ExperienceItem[] = [
     employmentType: "fullTime",
     workMode: "hybrid",
     startDate: "2022-11",
-    endDate: null,
     location: "India",
     description:
     "Founded KridAstra to build scalable software products and digital solutions. Leading product development, system architecture, full-stack engineering, and technical strategy while delivering solutions for businesses across multiple domains.",
@@ -32,7 +31,6 @@ export const experiences: ExperienceItem[] = [
     employmentType: "contract",
     workMode: "remote",
     startDate: "2023-09",
-    endDate: null,
     location: "India",
     description:
       "Part of a creative, fast-paced team at Moonglade, where I contribute to the planning, development, and optimization of diverse software projects.",
