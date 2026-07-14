@@ -7,7 +7,8 @@ export const experiences: ExperienceItem[] = [
     role: "Founder & Software Engineer",
     employmentType: "fullTime",
     workMode: "hybrid",
-    duration: "Nov 2022 - Present",
+    startDate: "2022-11",
+    endDate: null,
     location: "India",
     description:
     "Founded KridAstra to build scalable software products and digital solutions. Leading product development, system architecture, full-stack engineering, and technical strategy while delivering solutions for businesses across multiple domains.",
@@ -28,7 +29,8 @@ export const experiences: ExperienceItem[] = [
     role: "Software Engineer (Full Stack)",
     employmentType: "contract",
     workMode: "remote",
-    duration: "Sept 2023 - Present",
+    startDate: "2023-09",
+    endDate: null,
     location: "India",
     description:
       "Part of a creative, fast-paced team at Moonglade, where I contribute to the planning, development, and optimization of diverse software projects.",
@@ -44,6 +46,7 @@ export const experiences: ExperienceItem[] = [
       "Cloudflare",
       "DigitalOcean",
     ],
+    current: true,
   },
   {
     id: 3,
@@ -51,7 +54,8 @@ export const experiences: ExperienceItem[] = [
     role: "AI Research Engineer",
     employmentType: "fullTime",
     workMode: "remote",
-    duration: "Feb 2026 - July 2026 (6 Months)",
+    startDate: "2026-02",
+    endDate: "2026-07",
     location: "Germany",
     description:
       "Conducted AI research for developmental dysplasia of the hip (DDH) detection using pediatric pelvic X-rays. Developed deep learning and computer vision models, evaluated foundation models, and implemented explainable AI techniques for medical imaging.",

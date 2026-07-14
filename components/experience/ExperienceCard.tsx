@@ -30,6 +30,27 @@ const employmentTypeIcons = {
 const formatString = (type: string) =>
   type.replace(/([A-Z])/g, " $1").replace(/^./, (char) => char.toUpperCase());
 
+export function formatDuration(experience: ExperienceItem) {
+  const start = new Date(`${experience.startDate}-01`);
+  const end = experience.endDate
+    ? new Date(`${experience.endDate}-01`)
+    : new Date();
+
+  const formatter = new Intl.DateTimeFormat("en", {
+    month: "short",
+    year: "numeric",
+  });
+
+  const totalMonths =
+    (end.getFullYear() - start.getFullYear()) * 12 +
+    (end.getMonth() - start.getMonth()) +
+    1;
+
+  return `${formatter.format(start)} – ${
+    experience.endDate ? formatter.format(end) : "Present"
+  } • ${totalMonths} ${totalMonths === 1 ? "mo" : "mos"}`;
+}
+
 export default function ExperienceCard({
   experience,
 }: Props) {
@@ -107,7 +128,7 @@ export default function ExperienceCard({
 
         <div className="flex items-center gap-2">
           <Calendar size={16} />
-          <span>{experience.duration}</span>
+          <span>{formatDuration(experience)}</span>
         </div>
 
         <div className="flex items-center gap-2">
