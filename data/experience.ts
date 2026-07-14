@@ -3,66 +3,71 @@ import { ExperienceItem } from "@/types/experience";
 export const experiences: ExperienceItem[] = [
   {
     id: 1,
-    company: "Your Current Company",
-    role: "Software Engineer",
-    duration: "2025 - Present",
+    company: "KridAstra",
+    logo: "/images/companies/kridastra.png",
+    role: "Founder & Software Engineer",
+    employmentType: "fullTime",
+    workMode: "hybrid",
+    startDate: "2022-11",
+    endDate: null,
     location: "India",
-
     description:
-    "Developing scalable software solutions, backend APIs, cloud-based applications, and contributing to production systems.",
-
+    "Founded KridAstra to build scalable software products and digital solutions. Leading product development, system architecture, full-stack engineering, and technical strategy while delivering solutions for businesses across multiple domains.",
     technologies: [
+      "Project Management",
+      "Leadership",
+      "Product Development",
+      "Full Stack Development",
+      "Deployment",
+      "Database & Server Management",
+      "Cost Effectiveness",
+    ],
+    current: true,
+  },
+  {
+    id: 2,
+    company: "Moonglade Consultancy",
+    logo: "/images/companies/moonglade_communication.jpg",
+    role: "Software Engineer (Full Stack)",
+    employmentType: "contract",
+    workMode: "remote",
+    startDate: "2023-09",
+    endDate: null,
+    location: "India",
+    description:
+      "Part of a creative, fast-paced team at Moonglade, where I contribute to the planning, development, and optimization of diverse software projects.",
+    technologies: [
+      "Next.js",
+      "Express.js",
+      "TypeScript",
       "Node.js",
       "PostgreSQL",
       "Prisma",
-      "React",
-      "Next.js",
+      "Docker",,
+      "AWS",
+      "Cloudflare",
+      "DigitalOcean",
     ],
-
     current: true,
   },
-
-  {
-    id: 2,
-    company: "Freelance",
-
-    role: "Full-Stack Developer",
-
-    duration: "2022 - Present",
-
-    location: "Remote",
-
-    description:
-    "Delivered web, backend, Android, and AI solutions for international clients and startups.",
-
-    technologies: [
-      "Android",
-      "Next.js",
-      "Java",
-      "Python",
-      "Firebase",
-    ],
-  },
-
   {
     id: 3,
-
-    company: "KridAstra",
-
-    role: "Founder",
-
-    duration: "2026 - Present",
-
-    location: "India",
-
+    company: "Independent Healthcare Startup",
+    role: "AI Research Engineer",
+    employmentType: "fullTime",
+    workMode: "remote",
+    startDate: "2026-02",
+    endDate: "2026-07",
+    location: "Germany",
     description:
-    "Building software products focused on solving real-world problems using modern technologies.",
-
+      "Conducted AI research for developmental dysplasia of the hip (DDH) detection using pediatric pelvic X-rays. Developed deep learning and computer vision models, evaluated foundation models, and implemented explainable AI techniques for medical imaging.",
     technologies: [
-      "Cloud",
+      "Python",
+      "PyTorch",
+      "Computer Vision",
+      "Deep Learning",
+      "Medical Imaging",
       "AI",
-      "React",
-      "Android",
     ],
   },
 ];
