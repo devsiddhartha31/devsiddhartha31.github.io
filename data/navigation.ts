@@ -12,9 +12,9 @@ export const navigation: NavigationItem[] = [
     href: "#experience",
   },
   {
-    id: "education",
-    name: "Education",
-    href: "#education",
+    id: "skills",
+    name: "Skills",
+    href: "#skills",
   },
   {
     id: "contact",
