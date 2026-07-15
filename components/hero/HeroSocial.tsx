@@ -5,13 +5,13 @@ import {
   IconMail,
 } from "@tabler/icons-react";
 
-import { social } from "@/data/social";
+import { personalSocial } from "@/data/personalSocial";
 
 export default function HeroSocial() {
   return (
     <div className="mt-4 flex items-center gap-5">
       <Link
-        href={social.github}
+        href={personalSocial.github}
         target="_blank"
         aria-label="GitHub"
         className="transition hover:text-indigo-400"
@@ -20,7 +20,7 @@ export default function HeroSocial() {
       </Link>
 
       <Link
-        href={social.linkedin}
+        href={personalSocial.linkedin}
         target="_blank"
         aria-label="LinkedIn"
         className="transition hover:text-indigo-400"
@@ -29,7 +29,7 @@ export default function HeroSocial() {
       </Link>
 
       <Link
-        href={social.email}
+        href={personalSocial.email}
         aria-label="Email"
         className="transition hover:text-indigo-400"
       >
