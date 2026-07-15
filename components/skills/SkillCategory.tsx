@@ -7,8 +7,22 @@ interface Props {
 
 export default function SkillCategory({ category }: Props) {
   return (
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-
+    <article
+      className="
+        rounded-3xl
+        border
+        border-white/5
+        bg-zinc-900/60
+        p-8
+        backdrop-blur-xl
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:border-indigo-500/30
+        hover:shadow-xl
+        hover:shadow-indigo-500/10
+      "
+    >
       <h3 className="text-xl font-semibold">
         {category.title}
       </h3>
@@ -25,7 +39,6 @@ export default function SkillCategory({ category }: Props) {
           />
         ))}
       </div>
-
-    </div>
+    </article>
   );
 }
