@@ -19,7 +19,7 @@ export default function Footer() {
 
           {/* Navigation */}
 
-          <div className="grid grid-cols-2 gap-10 text-sm">
+          <div className="grid w-full gap-10 md:grid-cols-3">
 
             <div>
 
@@ -52,41 +52,73 @@ export default function Footer() {
             <div>
 
               <h4 className="mb-4 font-semibold text-white">
+                Personal
+              </h4>
+
+              <div className="space-y-3">
+
+                <Link
+                  href={personalSocial.github}
+                  target="_blank"
+                  className="flex items-center gap-2 text-zinc-400 transition hover:text-white"
+                >
+                  <IconBrandGithub size={18} />
+                  <span>GitHub</span>
+                </Link>
+
+                <Link
+                  href={personalSocial.linkedin}
+                  target="_blank"
+                  className="flex items-center gap-2 text-zinc-400 transition hover:text-white"
+                >
+                  <IconBrandLinkedin size={18} />
+                  <span>LinkedIn</span>
+                </Link>
+
+                <Link
+                  href={personalSocial.email}
+                  className="flex items-center gap-2 text-zinc-400 transition hover:text-white"
+                >
+                  <IconMail size={18} />
+                  <span>Email</span>
+                </Link>
+
+              </div>
+
+            </div>
+
+            <div>
+
+              <h4 className="mb-4 font-semibold text-white">
                 KridAstra
               </h4>
 
-              <div className="flex items-center gap-4">
+              <div className="space-y-3">
 
                 <Link
                   href={companySocial.github}
                   target="_blank"
-                  aria-label="GitHub"
+                  className="flex items-center gap-2 text-zinc-400 transition hover:text-white"
                 >
-                  <IconBrandGithub
-                    size={22}
-                    className="text-zinc-400 transition hover:text-indigo-400"
-                  />
+                  <IconBrandGithub size={18} />
+                  <span>GitHub</span>
                 </Link>
 
                 <Link
                   href={companySocial.linkedin}
                   target="_blank"
-                  aria-label="LinkedIn"
+                  className="flex items-center gap-2 text-zinc-400 transition hover:text-white"
                 >
-                  <IconBrandLinkedin
-                    size={22}
-                    className="text-zinc-400 transition hover:text-indigo-400"
-                  />
+                  <IconBrandLinkedin size={18} />
+                  <span>LinkedIn</span>
                 </Link>
 
                 <Link
                   href={companySocial.email}
-                  aria-label="Email"
+                  className="flex items-center gap-2 text-zinc-400 transition hover:text-white"
                 >
-                  <IconMail
-                    size={22}
-                    className="text-zinc-400 transition hover:text-indigo-400"
-                  />
+                  <IconMail size={18} />
+                  <span>Email</span>
                 </Link>
 
               </div>
