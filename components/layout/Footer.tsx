@@ -7,60 +7,103 @@ import {
 } from "@tabler/icons-react";
 
 import { footer } from "@/data/footer";
-import { social } from "@/data/social";
+import { companySocial } from "@/data/companySocial";
+import { personalSocial } from "@/data/personalSocial";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-800 py-12">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 text-center md:flex-row md:text-left">
+    <footer className="border-t border-white/5 bg-zinc-950">
+      <div className="mx-auto max-w-7xl px-6 py-12">
 
-        <div>
-          <h3 className="text-lg font-semibold">
-            Siddhartha Kumar
-          </h3>
+        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
 
-          <p className="mt-2 text-sm text-zinc-400">
-            {footer.message}
-          </p>
+          {/* Navigation */}
 
-          <p className="mt-2 text-xs text-zinc-500">
-            {footer.copyright}
-          </p>
+          <div className="grid grid-cols-2 gap-10 text-sm">
+
+            <div>
+
+              <h4 className="mb-4 font-semibold text-white">
+                Navigate
+              </h4>
+
+              <div className="space-y-3 text-zinc-400">
+
+                <Link href="#about" className="block hover:text-white">
+                  About
+                </Link>
+
+                <Link href="#projects" className="block hover:text-white">
+                  Projects
+                </Link>
+
+                <Link href="#experience" className="block hover:text-white">
+                  Experience
+                </Link>
+
+                <Link href="#skills" className="block hover:text-white">
+                  Skills
+                </Link>
+
+              </div>
+
+            </div>
+
+            <div>
+
+              <h4 className="mb-4 font-semibold text-white">
+                KridAstra
+              </h4>
+
+              <div className="flex items-center gap-4">
+
+                <Link
+                  href={companySocial.github}
+                  target="_blank"
+                  aria-label="GitHub"
+                >
+                  <IconBrandGithub
+                    size={22}
+                    className="text-zinc-400 transition hover:text-indigo-400"
+                  />
+                </Link>
+
+                <Link
+                  href={companySocial.linkedin}
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
+                  <IconBrandLinkedin
+                    size={22}
+                    className="text-zinc-400 transition hover:text-indigo-400"
+                  />
+                </Link>
+
+                <Link
+                  href={companySocial.email}
+                  aria-label="Email"
+                >
+                  <IconMail
+                    size={22}
+                    className="text-zinc-400 transition hover:text-indigo-400"
+                  />
+                </Link>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
 
-        <div className="flex items-center gap-5">
+        {/* Bottom */}
 
-          <Link
-            href={social.github}
-            target="_blank"
-            aria-label="GitHub"
-          >
-            <IconBrandGithub
-              className="transition hover:text-indigo-400"
-              size={24}
-            />
-          </Link>
+        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/5 pt-6 text-sm text-zinc-500 md:flex-row">
 
-          <Link
-            href={social.linkedin}
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <IconBrandLinkedin
-              className="transition hover:text-indigo-400"
-              size={24}
-            />
-          </Link>
-
-          <Link
-            href={social.email}
-            aria-label="Email"
-          >
-            <IconMail
-              className="transition hover:text-indigo-400"
-              size={24}
-            />
-          </Link>
+          <p>
+            {footer.copyright}
+          </p>
 
         </div>
 
