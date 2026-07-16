@@ -51,6 +51,7 @@ export const experiences: ExperienceItem[] = [
   {
     id: 3,
     company: "Independent Healthcare Startup",
+    logo: "/images/companies/ai_dummy.jpg",
     role: "AI Research Engineer",
     employmentType: "fullTime",
     workMode: "remote",
@@ -66,6 +67,26 @@ export const experiences: ExperienceItem[] = [
       "Deep Learning",
       "Medical Imaging",
       "AI",
+    ],
+  },
+  {
+    id: 4,
+    company: "Digital Turbine",
+    logo: "/images/companies/digital_turbine_full.jpg",
+    role: "Full Stack Developer",
+    employmentType: "freelance",
+    workMode: "remote",
+    startDate: "2023-09",
+    endDate: "2023-11",
+    location: "India",
+    description:
+      "Contributed to the development of a production web application. Collaborated with the engineering team to build responsive user interfaces, implement application features, and deliver maintainable, high-quality code.",
+    technologies: [
+      "Laravel",
+      "Angular",
+      "PHP",
+      "MySQL",
+      "AWS"
     ],
   },
 ];
