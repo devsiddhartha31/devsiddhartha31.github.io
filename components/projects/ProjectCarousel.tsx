@@ -43,23 +43,12 @@ export default function ProjectCarousel({
 
   return (
     <div className="mt-12">
-      <div
-        className="overflow-hidden"
-        ref={emblaRef}
-      >
-        <div className="flex">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="min-w-0 flex-[0_0_100%] px-3 md:flex-[0_0_50%] xl:flex-[0_0_33.333%]"
-            >
-              <ProjectCard project={project} />
-            </div>
-          ))}
-        </div>
+
+      <div className="min-w-14 text-center text-sm font-medium tabular-nums text-zinc-400">
+        {currentSlideIndex + 1} / {slideCount}
       </div>
 
-      {(slideCount > 3) && (
+      {(slideCount > 0) && (
         <div className="mt-8 flex items-center justify-center gap-4">
 
           <button
@@ -69,8 +58,20 @@ export default function ProjectCarousel({
             <ChevronLeft size={18} />
           </button>
 
-          <div className="min-w-14 text-center text-sm font-medium tabular-nums text-zinc-400">
-            {currentSlideIndex + 1} / {slideCount}
+          <div
+            className="overflow-hidden"
+            ref={emblaRef}
+          >
+            <div className="flex">
+              {projects.map((project) => (
+                <div
+                  key={project.id}
+                  className="min-w-0 flex-[0_0_100%] px-3 md:flex-[0_0_50%] xl:flex-[0_0_33.333%]"
+                >
+                  <ProjectCard project={project} />
+                </div>
+              ))}
+            </div>
           </div>
 
           <button
