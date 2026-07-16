@@ -51,6 +51,7 @@ export const experiences: ExperienceItem[] = [
   {
     id: 3,
     company: "Independent Healthcare Startup",
+    logo: "/images/companies/ai_dummy.jpg",
     role: "AI Research Engineer",
     employmentType: "fullTime",
     workMode: "remote",
