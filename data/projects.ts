@@ -28,7 +28,10 @@ export const projects: Project[] = [
     status: "enterprise",
     technologies: [
       "React",
-      "Node.js"
+      "CMS API",
+      "Pixel Fire",
+      "Weather API",
+      "Geolocation API"
     ],
     image: "/images/projects/kwality_walls_campaign.png",
     featured: true,
@@ -41,9 +44,12 @@ export const projects: Project[] = [
     category: "web",
     status: "enterprise",
     technologies: [
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
       "JavaScript",
-      "WebSockets",
-      "HTML5"
+      "HTML5",
+      "CSS"
     ],
     image: "/images/projects/indonesia_live_pic.png",
     featured: true,
@@ -56,9 +62,12 @@ export const projects: Project[] = [
     category: "web",
     status: "enterprise",
     technologies: [
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
       "JavaScript",
-      "WebSockets",
-      "HTML5"
+      "HTML5",
+      "CSS"
     ],
     image: "/images/projects/milo_campaign.png",
     featured: true,
@@ -71,9 +80,12 @@ export const projects: Project[] = [
     category: "web",
     status: "enterprise",
     technologies: [
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
       "JavaScript",
-      "WebSockets",
-      "HTML5"
+      "HTML5",
+      "CSS"
     ],
     image: "/images/projects/kitkat_campaign.png",
     featured: true,
@@ -86,8 +98,10 @@ export const projects: Project[] = [
     category: "web",
     status: "enterprise",
     technologies: [
-      "React",
-      "Node.js"
+      "HTML",
+      "CSS",
+      "JS",
+      "Consumer API"
     ],
     image: "/images/projects/sunsilk_campaign.png",
     featured: true,
@@ -122,6 +136,8 @@ export const projects: Project[] = [
       "Node.js",
       "PostgreSQL",
       "Cloud",
+      "Express.js",
+      "React"
     ],
     image: "/images/projects/beehive.png",
     featured: true,
@@ -138,7 +154,7 @@ export const projects: Project[] = [
       "Android",
       "Kotlin",
       "Jetpack Compose",
-      "Room",
+      "MySQL",
     ],
     image: "/images/projects/wednote.png",
     featured: true,
@@ -151,7 +167,9 @@ export const projects: Project[] = [
     category: "game",
     status: "production",
     technologies: [
-      "Java"
+      "Java",
+      "Game Development",
+      "Product Design"
     ],
     image: "/images/projects/pro_learning.png",
     featured: true,
@@ -277,7 +295,8 @@ export const projects: Project[] = [
     technologies: [
       "Android",
       "Java",
-      "SQLite",
+      "Kotlin",
+      "Room"
     ],
     image: "/images/projects/financials_fab.png",
     featured: true,
@@ -292,7 +311,10 @@ export const projects: Project[] = [
     technologies: [
       "Java",
       "Swing",
-      "Cryptography"
+      "Cryptography",
+      "AES & DES",
+      "Binary",
+      "Hex"
     ],
     image: "/images/projects/edcrypt_fab.png",
     featured: true,
@@ -305,7 +327,10 @@ export const projects: Project[] = [
     category: "game",
     status: "personal",
     technologies: [
-      "Java"
+      "Java",
+      "Game Development",
+      "Game Physics",
+      "Level Design"
     ],
     image: "/images/projects/gta.png",
     featured: true,
