@@ -88,7 +88,7 @@ export const projects: Project[] = [
       "LoRA",
     ],
     image: "/images/projects/placeholder.png",
-    featured: false,
+    featured: true,
   },
   {
     id: 6,
@@ -107,7 +107,6 @@ export const projects: Project[] = [
     image: "/images/projects/placeholder.png",
     featured: true,
   },
-
   {
     id: 7,
     title: "FinancialFab",
@@ -124,7 +123,6 @@ export const projects: Project[] = [
     image: "/images/projects/placeholder.png",
     featured: true,
   },
-
   {
     id: 8,
     title: "FastAndFurious",
@@ -141,7 +139,6 @@ export const projects: Project[] = [
     image: "/images/projects/placeholder.png",
     featured: true,
   },
-
   {
     id: 9,
     title: "Collision Detection Library",
@@ -158,22 +155,16 @@ export const projects: Project[] = [
     image: "/images/projects/placeholder.png",
     featured: false,
   },
-
   {
     id: 10,
-    title: "3D Object Loader",
-    slug: "java-3d-object-loader",
-    description:
-      "Java library for loading and rendering 3D models, simplifying game development workflows.",
+    title: "Shortest Path Generator",
+    slug: "shortest-path-generator",
+    description: "Python application implementing shortest path algorithms for route optimization and delivery planning.",
     category: "library",
     status: "opensource",
-    technologies: [
-      "Java",
-      "OpenGL",
-      "3D Graphics",
-    ],
-    image: "/images/projects/placeholder.png",
-    featured: false,
+    technologies: ["Python", "Graphs", "Algorithms"],
+    image: "/images/projects/shortest_path.png",
+    featured: true,
   },
   {
     id: 11,
@@ -320,13 +311,13 @@ export const projects: Project[] = [
   },
   {
     id: 24,
-    title: "IVS Live Video Filter",
+    title: "Live Video Filter",
     slug: "ivs-live-video-filter",
-    description: "Live video application with real-time visual effects and camera filter processing.",
-    category: "android",
-    status: "production",
-    technologies: ["Android", "CameraX", "OpenGL"],
-    image: "/images/projects/placeholder.png",
+    description: "Live video application with real-time visual effects, camera filter processing and green screen filter.",
+    category: "library",
+    status: "opensource",
+    technologies: ["Android", "Kotlin", "Java", "OpenGL"],
+    image: "/images/projects/video_filter.png",
     featured: true,
   },
   {
@@ -430,14 +421,14 @@ export const projects: Project[] = [
   },
   {
     id: 34,
-    title: "Sockets Messenger",
+    title: "Messenger",
     slug: "sockets-messenger",
     description: "Real-time desktop messaging application built using socket programming for instant communication.",
-    category: "desktop",
-    status: "personal",
+    category: "library",
+    status: "opensource",
     technologies: ["Java", "Sockets", "Networking"],
-    image: "/images/projects/placeholder.png",
-    featured: false,
+    image: "/images/projects/messaging.png",
+    featured: true,
   },
   {
     id: 35,
@@ -445,7 +436,7 @@ export const projects: Project[] = [
     slug: "link-state-routing-simulator",
     description: "Network routing simulator implementing the Link State Routing algorithm for educational visualization.",
     category: "desktop",
-    status: "personal",
+    status: "opensource",
     technologies: ["Java", "Networking", "Algorithms"],
     image: "/images/projects/placeholder.png",
     featured: false,
@@ -496,13 +487,13 @@ export const projects: Project[] = [
   },
   {
     id: 40,
-    title: "Shortest Path Generator",
-    slug: "shortest-path-generator",
-    description: "Python application implementing shortest path algorithms for route optimization and delivery planning.",
+    title: "Image Viewer Library",
+    slug: "image-viewer-library",
+    description: "Reusable Java library providing image viewing, zooming, panning, and rendering capabilities.",
     category: "library",
     status: "opensource",
-    technologies: ["Python", "Graphs", "Algorithms"],
-    image: "/images/projects/placeholder.png",
+    technologies: ["Java", "Swing"],
+    image: "/images/projects/image_viewer.png",
     featured: true,
   },
   {
@@ -621,10 +612,10 @@ export const projects: Project[] = [
     slug: "platformer-engine",
     description: "2D platformer prototype demonstrating character movement, collision detection, and level mechanics.",
     category: "game",
-    status: "personal",
+    status: "opensource",
     technologies: ["Java"],
     image: "/images/projects/placeholder.png",
-    featured: true,
+    featured: false,
   },
   {
     id: 52,
@@ -815,14 +806,14 @@ export const projects: Project[] = [
   },
   {
     id: 69,
-    title: "Image Viewer Library",
-    slug: "image-viewer-library",
-    description: "Reusable Java library providing image viewing, zooming, panning, and rendering capabilities.",
+    title: "Java 2D Game Development Toolkit",
+    slug: "java-2d-game-development-toolkit",
+    description: "Collection of reusable libraries including sprite/map loader, character animation, game physics, and level mechanics.",
     category: "library",
     status: "opensource",
-    technologies: ["Java", "Swing"],
-    image: "/images/projects/placeholder.png",
-    featured: false,
+    technologies: ["Java", "OpenGL", "Swing"],
+    image: "/images/projects/java_game_dev_kit.png",
+    featured: true,
   },
   {
     id: 70,
@@ -881,13 +872,18 @@ export const projects: Project[] = [
   },
   {
     id: 75,
-    title: "Java Game Development Toolkit",
-    slug: "java-game-development-toolkit",
-    description: "Collection of reusable Java libraries including collision detection, 3D object loading, and image viewing to accelerate game development.",
+    title: "3D Object Loader",
+    slug: "java-3d-object-loader",
+    description:
+      "Java library for loading and rendering 3D models, simplifying game development workflows.",
     category: "library",
     status: "opensource",
-    technologies: ["Java", "OpenGL", "Swing"],
-    image: "/images/projects/placeholder.png",
+    technologies: [
+      "Java",
+      "OpenGL",
+      "3D Graphics",
+    ],
+    image: "/images/projects/3d_car_object.png",
     featured: true,
   },
 ];
