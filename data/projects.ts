@@ -16,7 +16,7 @@ export const projects: Project[] = [
       "Prisma",
       "TypeScript",
     ],
-    image: "/images/projects/cms.png",
+    image: "/images/projects/campaign_management_system.png",
     featured: true,
   },
   {
@@ -33,7 +33,7 @@ export const projects: Project[] = [
       "Weather API",
       "Geolocation API"
     ],
-    image: "/images/projects/kwality_walls_campaign.png",
+    image: "/images/projects/walls_campaign.png",
     featured: true,
   },
   {
@@ -103,7 +103,7 @@ export const projects: Project[] = [
       "JS",
       "Consumer API"
     ],
-    image: "/images/projects/sunsilk_campaign.png",
+    image: "/images/projects/sunsilk_survey_form.png",
     featured: true,
   },
   {
