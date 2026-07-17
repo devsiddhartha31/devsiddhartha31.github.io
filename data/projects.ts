@@ -69,7 +69,7 @@ export const projects: Project[] = [
       "GradCAM",
       "Computer Vision",
     ],
-    image: "/images/projects/placeholder.png",
+    image: "/images/projects/ddh.png",
     featured: true,
   },
   {
@@ -88,7 +88,7 @@ export const projects: Project[] = [
       "LoRA",
     ],
     image: "/images/projects/placeholder.png",
-    featured: true,
+    featured: false,
   },
   {
     id: 6,
