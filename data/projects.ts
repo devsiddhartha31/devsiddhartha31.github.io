@@ -120,7 +120,7 @@ export const projects: Project[] = [
       "Java",
       "SQLite",
     ],
-    image: "/images/projects/placeholder.png",
+    image: "/images/projects/financials_fab.png",
     featured: true,
   },
   {
@@ -137,7 +137,7 @@ export const projects: Project[] = [
       "Networking",
     ],
     image: "/images/projects/placeholder.png",
-    featured: true,
+    featured: false,
   },
   {
     id: 9,
@@ -361,7 +361,7 @@ export const projects: Project[] = [
     category: "desktop",
     status: "personal",
     technologies: ["Java", "Swing", "Cryptography"],
-    image: "/images/projects/placeholder.png",
+    image: "/images/projects/edcrypt_fab.png",
     featured: true,
   },
   {
@@ -406,7 +406,7 @@ export const projects: Project[] = [
     status: "personal",
     technologies: ["Java", "Swing", "Audio"],
     image: "/images/projects/placeholder.png",
-    featured: true,
+    featured: false,
   },
   {
     id: 33,
@@ -417,7 +417,7 @@ export const projects: Project[] = [
     status: "personal",
     technologies: ["Java", "Swing"],
     image: "/images/projects/placeholder.png",
-    featured: true,
+    featured: false,
   },
   {
     id: 34,
@@ -450,7 +450,7 @@ export const projects: Project[] = [
     status: "personal",
     technologies: ["C++", "Speech Recognition", "Automation"],
     image: "/images/projects/placeholder.png",
-    featured: true,
+    featured: false,
   },
   {
     id: 37,
@@ -571,7 +571,7 @@ export const projects: Project[] = [
     status: "personal",
     technologies: ["Java", "Android"],
     image: "/images/projects/placeholder.png",
-    featured: true,
+    featured: false,
   },
   {
     id: 48,
@@ -603,7 +603,7 @@ export const projects: Project[] = [
     category: "game",
     status: "personal",
     technologies: ["Java"],
-    image: "/images/projects/placeholder.png",
+    image: "/images/projects/gta.png",
     featured: true,
   },
   {
@@ -659,7 +659,7 @@ export const projects: Project[] = [
     status: "personal",
     technologies: ["Java"],
     image: "/images/projects/placeholder.png",
-    featured: true,
+    featured: false,
   },
   {
     id: 56,
@@ -714,7 +714,7 @@ export const projects: Project[] = [
     status: "personal",
     technologies: ["Java"],
     image: "/images/projects/placeholder.png",
-    featured: true,
+    featured: false,
   },
   {
     id: 61,
@@ -725,7 +725,7 @@ export const projects: Project[] = [
     status: "personal",
     technologies: ["Java"],
     image: "/images/projects/placeholder.png",
-    featured: true,
+    featured: false,
   },
   {
     id: 62,
@@ -736,7 +736,7 @@ export const projects: Project[] = [
     status: "personal",
     technologies: ["Java"],
     image: "/images/projects/placeholder.png",
-    featured: true,
+    featured: false,
   },
   {
     id: 63,
