@@ -16,7 +16,7 @@ export const projects: Project[] = [
     "Prisma",
     "TypeScript",
     ],
-    image: "/images/projects/placeholder.png",
+    image: "/images/projects/cms.png",
     featured: true,
   },
   {
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     "PostgreSQL",
     "REST API",
     ],
-    image: "/images/projects/placeholder.png",
+    image: "/images/projects/dt_portfolio.png",
     featured: true,
   },
   {
@@ -788,7 +788,7 @@ export const projects: Project[] = [
     category: "web",
     status: "enterprise",
     technologies: ["React", "Node.js"],
-    image: "/images/projects/placeholder.png",
+    image: "/images/projects/sunsilk_campaign.png",
     featured: true,
   },
   {
@@ -799,7 +799,7 @@ export const projects: Project[] = [
     category: "web",
     status: "enterprise",
     technologies: ["React", "Node.js"],
-    image: "/images/projects/placeholder.png",
+    image: "/images/projects/kwality_walls_campaign.png",
     featured: true,
   },
   {
@@ -810,7 +810,7 @@ export const projects: Project[] = [
     category: "web",
     status: "enterprise",
     technologies: ["JavaScript", "WebSockets", "HTML5"],
-    image: "/images/projects/placeholder.png",
+    image: "/images/projects/indonesia_live_pic.png",
     featured: true,
   },
   {
@@ -865,7 +865,7 @@ export const projects: Project[] = [
     category: "web",
     status: "enterprise",
     technologies: ["JavaScript", "WebSockets", "HTML5"],
-    image: "/images/projects/placeholder.png",
+    image: "/images/projects/milo_campaign.png",
     featured: true,
   },
   {
@@ -876,7 +876,7 @@ export const projects: Project[] = [
     category: "web",
     status: "enterprise",
     technologies: ["JavaScript", "WebSockets", "HTML5"],
-    image: "/images/projects/placeholder.png",
+    image: "/images/projects/kitkat_campaign.png",
     featured: true,
   },
   {
