@@ -10,6 +10,7 @@ import ProjectCard from "./ProjectCard";
 
 interface Props {
   projects: Project[];
+  openProject: (project: Project) => void;
 }
 
 export default function ProjectCarousel({

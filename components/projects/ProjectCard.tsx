@@ -14,6 +14,7 @@ import { cn } from "@/libs/utils"
 
 interface Props {
   project: Project;
+  openProject: (project: Project) => void;
 }
 
 const statusColors = {

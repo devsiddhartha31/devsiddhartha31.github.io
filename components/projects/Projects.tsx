@@ -7,6 +7,7 @@ import Section from "@/components/ui/Section";
 import SectionTitle from "@/components/ui/SectionTitle";
 
 import { projects } from "@/data/projects";
+import { Project } from "@/types/project";
 
 import ProjectCarousel from "./ProjectCarousel";
 import ProjectFilters from "./ProjectFilters";
