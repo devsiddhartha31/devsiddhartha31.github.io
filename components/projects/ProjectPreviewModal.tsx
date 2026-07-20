@@ -27,24 +27,15 @@ export default function ProjectPreviewModal({
       >
         <div className="absolute right-5 top-5 flex gap-2">
 
-          <button
-            onClick={onPrevious}
-            className="rounded-full border border-white/10 p-2 text-zinc-400 transition hover:border-indigo-500 hover:text-white"
-          >
+          <button onClick={onPrevious} className="rounded-full border border-white/20 bg-black/50 p-2 text-white backdrop-blur-md transition hover:bg-indigo-600">
             <ChevronLeft size={18} />
           </button>
 
-          <button
-            onClick={onNext}
-            className="rounded-full border border-white/10 p-2 text-zinc-400 transition hover:border-indigo-500 hover:text-white"
-          >
+          <button onClick={onNext} className="rounded-full border border-white/20 bg-black/50 p-2 text-white backdrop-blur-md transition hover:bg-indigo-600">
             <ChevronRight size={18} />
           </button>
 
-          <button
-            onClick={onClose}
-            className="rounded-full border border-white/10 p-2 text-zinc-400 transition hover:border-red-500 hover:text-white"
-          >
+          <button onClick={onClose} className="rounded-full border border-white/20 bg-black/50 p-2 text-white backdrop-blur-md transition hover:bg-red-500">
             <X size={18} />
           </button>
 
