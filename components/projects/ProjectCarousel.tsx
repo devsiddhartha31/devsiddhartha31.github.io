@@ -10,10 +10,11 @@ import ProjectCard from "./ProjectCard";
 
 interface Props {
   projects: Project[];
+  openProject: (project: Project) => void;
 }
 
 export default function ProjectCarousel({
-  projects,
+  projects, openProject
 }: Props) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
@@ -71,7 +72,10 @@ export default function ProjectCarousel({
                     : "min-w-0 flex-[0_0_100%] px-3 md:flex-[0_0_50%] xl:flex-[0_0_33.333%]"
                 }
               >
-                <ProjectCard project={project} />
+                <ProjectCard
+                  project={project}
+                  openProject={openProject}
+                />
               </div>
             ))}
           </div>

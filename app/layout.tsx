@@ -1,14 +1,37 @@
 import "./globals.css";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
+import type { Metadata } from "next";
+import { profile } from "@/data/profile"
 
 const geist = Geist({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Siddhartha Kumar",
-  description:
-    "Software Engineer | Full-Stack & Cloud | Android | AI/ML | Founder @ KridAstra",
+export const metadata: Metadata = {
+  metadataBase: new URL(profile.portfolio),
+  title: profile.name,
+  description: profile.headline,
+  openGraph: {
+    title: profile.name,
+    description: profile.headline,
+    url: profile.portfolio,
+    siteName: profile.name,
+    images: [
+      {
+        url: profile.picture,
+        width: 1200,
+        height: 630,
+        alt: profile.name,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: profile.name,
+    description: profile.headline,
+    images: [profile.picture],
+  },
 };
 
 export default function RootLayout({
@@ -18,7 +41,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={geist.className}>
+        {children}
+      </body>
     </html>
   );
 }

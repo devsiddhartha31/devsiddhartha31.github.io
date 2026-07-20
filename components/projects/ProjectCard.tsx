@@ -10,9 +10,11 @@ import {
 
 import { Project } from "@/types/project";
 import SkillBadge from "@/components/skills/SkillBadge";
+import { cn } from "@/libs/utils"
 
 interface Props {
   project: Project;
+  openProject: (project: Project) => void;
 }
 
 const statusColors = {
@@ -34,28 +36,19 @@ const categoryColors = {
 };
 
 export default function ProjectCard({
-  project,
+  project, openProject
 }: Props) {
+  const isPreviewAvailable = !!project.preview;
+
   return (
     <article
-      className="
-        group
-        flex
-        h-full
-        flex-col
-        overflow-hidden
-        rounded-3xl
-        border
-        border-white/5
-        bg-zinc-900/60
-        backdrop-blur-xl
-        transition-all
-        duration-300
-        hover:-translate-y-2
-        hover:border-indigo-500/30
-        hover:shadow-2xl
-        hover:shadow-indigo-500/10
-      "
+      className={cn(
+        "group flex h-full flex-col overflow-hidden rounded-3xl border border-white/5 bg-zinc-900/60 backdrop-blur-xl transition-all duration-300 hover:border-indigo-500/30 hover:shadow-2xl hover:shadow-indigo-500/10",
+        isPreviewAvailable
+          ? "cursor-pointer hover:-translate-y-2"
+          : "cursor-default"
+      )}
+      onClick={() => isPreviewAvailable && openProject(project)}
     >
       {/* Image */}
 
@@ -64,7 +57,12 @@ export default function ProjectCard({
           src={project.image}
           alt={project.title}
           fill
-          className="object-cover transition duration-500 group-hover:scale-110"
+          className={cn(
+            "object-cover transition duration-500",
+            isPreviewAvailable
+              ? "cursor-pointer group-hover:scale-110"
+              : "cursor-default"
+          )}
         />
       </div>
 
