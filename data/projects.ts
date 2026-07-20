@@ -18,6 +18,16 @@ export const projects: Project[] = [
     ],
     image: "/images/projects/campaign_management_system.png",
     featured: true,
+    preview: {
+      overview: "Campaign Management System",
+      highlights: [
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "Prisma",
+        "TypeScript",
+      ]
+    },
   },
   {
     id: 2,
