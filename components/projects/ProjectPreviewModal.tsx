@@ -1,17 +1,18 @@
 "use client";
 
-import { X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 import { Project } from "@/types/project";
 
 interface Props {
   project: Project | null;
   onClose: () => void;
+  onPrevious: () => void;
+  onNext: () => void;
 }
 
 export default function ProjectPreviewModal({
-  project,
-  onClose,
+  project, onClose, onPrevious, onNext
 }: Props) {
   if (!project?.preview) return null;
 
@@ -24,12 +25,30 @@ export default function ProjectPreviewModal({
         className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-3xl border border-white/10 bg-zinc-900 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          className="absolute right-5 top-5 rounded-full border border-white/10 p-2 text-zinc-400 transition hover:border-indigo-500 hover:text-white"
-          onClick={onClose}
-        >
-          <X size={18} />
-        </button>
+        <div className="absolute right-5 top-5 flex gap-2">
+
+          <button
+            onClick={onPrevious}
+            className="rounded-full border border-white/10 p-2 text-zinc-400 transition hover:border-indigo-500 hover:text-white"
+          >
+            <ChevronLeft size={18} />
+          </button>
+
+          <button
+            onClick={onNext}
+            className="rounded-full border border-white/10 p-2 text-zinc-400 transition hover:border-indigo-500 hover:text-white"
+          >
+            <ChevronRight size={18} />
+          </button>
+
+          <button
+            onClick={onClose}
+            className="rounded-full border border-white/10 p-2 text-zinc-400 transition hover:border-red-500 hover:text-white"
+          >
+            <X size={18} />
+          </button>
+
+        </div>
 
         <img
           src={project.image}
