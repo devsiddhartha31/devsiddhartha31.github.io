@@ -10,10 +10,20 @@ import { projects } from "@/data/projects";
 
 import ProjectCarousel from "./ProjectCarousel";
 import ProjectFilters from "./ProjectFilters";
+import ProjectPreviewModal from "./ProjectPreviewModal";
 
 export default function Projects() {
   const [activeStatusFilter, setActiveStatusFilter] = useState("enterprise");
   const featuredProjects = projects.filter((project) => project.featured);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const openProject = (project: Project) => {
+    setSelectedProject(project);
+  };
+
+  const closeProject = () => {
+    setSelectedProject(null);
+  };
 
   const statusFilters = useMemo(
     () => [
@@ -51,8 +61,13 @@ export default function Projects() {
 
         <ProjectCarousel
           projects={filteredProjects}
+          openProject={openProject}
         />
 
+        <ProjectPreviewModal
+          project={selectedProject}
+          onClose={closeProject}
+        />
       </Container>
     </Section>
   );
