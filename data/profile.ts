@@ -13,6 +13,8 @@ export const profile = {
     "Building KridAstra",
   ],
 
+  portfolio: "https://devsiddhartha31.github.io",
+
   github: "https://github.com/devsiddhartha31",
 
   linkedin: "https://linkedin.com/in/devsiddhartha31",
@@ -20,4 +22,6 @@ export const profile = {
   email: "devsiddhartha31@gmail.com",
 
   resume: "/res/CV.pdf",
+
+  picture: "/images/profile/profile.jpg"
 };
