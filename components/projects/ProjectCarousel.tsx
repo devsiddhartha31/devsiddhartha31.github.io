@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { Project } from "@/types/project";
 
+import Button from "@/components/ui/Button";
 import ProjectCard from "./ProjectCard";
 
 interface Props {
@@ -51,12 +52,14 @@ export default function ProjectCarousel({
 
       <div className="mt-8 flex items-center justify-center gap-4">
 
-        <button
+        <Button
+          variant="ghost"
+          size="icon"
           onClick={() => emblaApi?.scrollPrev()}
-          className="rounded-full border border-zinc-700 p-3 text-zinc-400 transition-all hover:border-indigo-500 hover:text-white"
+          className="rounded-full border border-zinc-700 text-zinc-400 hover:border-indigo-500"
         >
-          <ChevronLeft size={18} />
-        </button>
+          <ChevronLeft className="h-5 w-5" />
+        </Button>
 
         <div
           className="overflow-hidden"
@@ -81,12 +84,14 @@ export default function ProjectCarousel({
           </div>
         </div>
 
-        <button
+        <Button
+          variant="ghost"
+          size="icon"
           onClick={() => emblaApi?.scrollNext()}
-          className="rounded-full border border-zinc-700 p-3 text-zinc-400 transition-all hover:border-indigo-500 hover:text-white"
+          className="rounded-full border border-zinc-700 text-zinc-400 hover:border-indigo-500"
         >
-          <ChevronRight size={18} />
-        </button>
+          <ChevronRight className="h-5 w-5" />
+        </Button>
 
       </div>
     </div>
