@@ -10,7 +10,7 @@ export default function HeroButtons() {
   const showResumeDownloadBtn = false;
 
   return (
-    <div className="mt-8 flex flex-wrap items-center gap-4">
+    <div className="mt-2 lg:mt-8 flex flex-wrap items-center gap-4">
 
       <Link href={routes.projects}>
         <Button>
