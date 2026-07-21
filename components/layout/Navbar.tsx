@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { Menu } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 
@@ -43,6 +44,16 @@ export default function Navbar() {
                 <span className="absolute -bottom-1.5 left-0 h-0.5 w-full origin-left scale-x-0 rounded-full bg-indigo-400 transition-transform duration-300 ease-out group-hover:scale-x-100"/>
               </Link>
             ))}
+          </div>
+
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              aria-label="Open navigation menu"
+            >
+              <Menu className="h-5 w-5" />
+            </Button>
           </div>
         </nav>
       </Container>
