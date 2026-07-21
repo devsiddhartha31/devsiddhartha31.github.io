@@ -27,7 +27,7 @@ export default function Navbar() {
                 {navbar.logo}
               </div>
 
-              <div className="hidden sm:block">
+              <div className="sm:hidden">
                 <p className="font-semibold">
                   {navbar.heading}
                 </p>
