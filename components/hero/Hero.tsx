@@ -10,12 +10,12 @@ export default function Hero() {
       <GradientBackground />
       <Container>
         <div className="flex min-h-[calc(100svh-4rem)] items-center py-22">
-          <div className="grid w-full gap-8 lg:grid-cols-2">
+          <div className="grid w-full gap-8 md:grid-cols-2">
             <HeroContent />
 
             <HeroImage />
 
-            <div className="lg:hidden">
+            <div className="md:hidden">
               <HeroButtons />
             </div>
           </div>

@@ -19,7 +19,7 @@ export default function HeroContent() {
 
       </div>
 
-      <h1 className="mt-4 max-w-4xl text-3xl lg:text-4xl xl:text-5xl font-black leading-[1.1] tracking-tight">
+      <h1 className="mt-4 max-w-4xl text-3xl md:text-4xl xl:text-5xl font-black leading-[1.1] tracking-tight">
 
         Engineering software
 
@@ -40,14 +40,14 @@ export default function HeroContent() {
         ))}
       </div>
 
-      <p className="mt-6 max-w-xl text-base lg:text-lg text-zinc-300 leading-8">
+      <p className="mt-6 max-w-xl text-base md:text-lg text-zinc-300 leading-8">
 
         {profile.description}
 
       </p>
 
       {/*Only for Desktop*/}
-      <div className="hidden lg:block">
+      <div className="hidden md:block">
         <HeroButtons />
       </div>
 
