@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import SkillBadge from "@/components/skills/SkillBadge";
 
 import {
@@ -70,6 +73,9 @@ export function formatDuration(experience: ExperienceItem) {
 export default function ExperienceCard({
   experience,
 }: Props) {
+
+  const [isContentCollapsed, setContentCollapsed] = useState(true);
+
   const companyInitials = experience.company
     .split(" ")
     .map((word) => word[0])
@@ -95,6 +101,7 @@ export default function ExperienceCard({
         hover:shadow-xl
         hover:shadow-indigo-500/10
       "
+      onClick={() => setContentCollapsed(!isContentCollapsed)}
     >
       {/* Header */}
 
@@ -169,22 +176,31 @@ export default function ExperienceCard({
 
       </div>
 
-      {/* Description */}
+      {/* Collapsable Content */}
+      <div
+        className={`transition-all duration-300 ${
+          isContentCollapsed ? "hidden" : "block"
+        }`}
+      >
 
-      <p className="mt-6 leading-7 text-zinc-400">
-        {experience.description}
-      </p>
+        {/* Description */}
 
-      {/* Technologies */}
+        <p className="mt-6 leading-7 text-zinc-400">
+          {experience.description}
+        </p>
 
-      <div className="mt-6 flex flex-wrap gap-2">
+        {/* Technologies */}
 
-        {experience.technologies.map((tech) => (
-          <SkillBadge
-            key={tech}
-            skill={tech}
-          />
-        ))}
+        <div className="mt-6 flex flex-wrap gap-2">
+
+          {experience.technologies.map((tech) => (
+            <SkillBadge
+              key={tech}
+              skill={tech}
+            />
+          ))}
+
+        </div>
 
       </div>
 
