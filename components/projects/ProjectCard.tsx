@@ -94,20 +94,20 @@ export default function ProjectCard({
 
         {/* Title */}
 
-        <h3 className="mt-5 text-2xl font-bold">
+        <h3 className="mt-5 text-xl md:text-2xl font-bold">
           {project.title}
         </h3>
 
         {/* Description */}
 
-        <p className="mt-4 flex-1 text-sm leading-7 text-zinc-400 line-clamp-3">
+        <p className="mt-4 flex-1 text-sm leading-7 text-zinc-400 line-clamp-4">
           {project.description}
         </p>
 
-        {/* Tech */}
+        {/* Tech
 
         <div className="mt-6 flex flex-wrap gap-2">
-          {project.technologies.slice(0, 4).map((tech) => (
+          {project.technologies.slice(0, 2).map((tech) => (
             <SkillBadge
               key={tech}
               skill={tech}
@@ -119,9 +119,9 @@ export default function ProjectCard({
               skill={`+${project.technologies.length - 4}`}
             />
           )}
-        </div>
+        </div> */}
 
-        {/* Footer */}
+        {/* Footer
 
         <div className="mt-8 flex items-center gap-4">
 
@@ -149,7 +149,7 @@ export default function ProjectCard({
             </Link>
           )}
 
-        </div>
+        </div>*/}
 
       </div>
     </article>
