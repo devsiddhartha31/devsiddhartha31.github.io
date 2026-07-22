@@ -71,8 +71,8 @@ export default function ProjectCarousel({
                 key={project.id}
                 className={
                   projects.length === 1
-                    ? "mx-auto max-w-md flex-[0_0_100%] px-3"
-                    : "min-w-0 flex-[0_0_100%] px-3 md:flex-[0_0_50%] xl:flex-[0_0_33.333%]"
+                    ? "mx-auto max-w-md flex-[0_0_100%] md:px-3"
+                    : "min-w-0 flex-[0_0_100%] md:px-3 md:flex-[0_0_50%] xl:flex-[0_0_33.333%]"
                 }
               >
                 <ProjectCard
