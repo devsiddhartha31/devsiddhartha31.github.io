@@ -23,11 +23,11 @@ export default function SkillCategory({ category }: Props) {
         hover:shadow-indigo-500/10
       "
     >
-      <h3 className="text-xl font-semibold">
+      <h3 className="text-lg md:text-xl font-semibold">
         {category.title}
       </h3>
 
-      <p className="mt-2 text-sm text-zinc-400">
+      <p className="mt-2 text-zinc-400">
         {category.description}
       </p>
 
