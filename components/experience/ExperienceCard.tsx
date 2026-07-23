@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import SkillBadge from "@/components/skills/SkillBadge";
+import { ChevronDown } from "lucide-react";
 
 import {
   Calendar,
@@ -221,6 +222,21 @@ export default function ExperienceCard({
 
         </div>
 
+      </div>
+
+      <div className="mt-8 text-center text-sm font-medium text-zinc-400 transition-colors hover:text-white">
+        <div className="flex items-center justify-center gap-2">
+          <span>
+            {isContentCollapsed ? "Show Details" : "Hide Details"}
+          </span>
+
+          <ChevronDown
+            size={16}
+            className={`transition-transform duration-300 ${
+              !isContentCollapsed ? "rotate-180" : ""
+            }`}
+          />
+        </div>
       </div>
 
     </article>
