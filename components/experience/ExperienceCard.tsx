@@ -103,7 +103,7 @@ export default function ExperienceCard({
         border
         border-white/5
         bg-zinc-900/60
-        p-8
+        p-6 md:p-8
         backdrop-blur-xl
         transition-all
         duration-300
@@ -115,7 +115,6 @@ export default function ExperienceCard({
       onClick={() => setContentCollapsed(!isContentCollapsed)}
     >
       {/* Header */}
-
       <div className="flex items-start justify-between">
 
         <div className="flex items-center gap-4">
@@ -148,17 +147,25 @@ export default function ExperienceCard({
 
         </div>
 
-        {experience.current && (
-          <div className="inline-flex items-center rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1">
+        <div className="hidden md:block">
+          {experience.current && (
+            <div className="inline-flex items-center rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1">
 
-            <div className="mr-2 h-2 w-2 rounded-full bg-green-400" />
+              <div className="mr-2 h-2 w-2 rounded-full bg-green-400" />
 
-            <span className="text-xs font-medium text-green-400">
-              Current
-            </span>
+              <span className="text-xs font-medium text-green-400">
+                Current
+              </span>
 
-          </div>
-        )}
+            </div>
+          )}
+        </div>
+
+        <div className="md:hidden">
+          {experience.current && (
+            <div className="m-2 h-2 w-2 rounded-full bg-green-400" />
+          )}
+        </div>
 
       </div>
 
