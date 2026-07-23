@@ -3,7 +3,7 @@ import { cn } from "@/libs/utils";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "pill";
   size?: "sm" | "md" | "lg" | "icon";
   className?: string;
 }
