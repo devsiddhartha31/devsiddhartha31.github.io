@@ -34,42 +34,38 @@ const employmentTypeMap = {
 const formatString = (type: string) =>
   type.replace(/([A-Z])/g, " $1").replace(/^./, (char) => char.toUpperCase());
 
+const monthYearFormatter = new Intl.DateTimeFormat("en", {
+  month: "short",
+  year: "numeric",
+});
+
 export function formatDuration(experience: ExperienceItem) {
   const start = new Date(`${experience.startDate}-01`);
   const end = experience.endDate
     ? new Date(`${experience.endDate}-01`)
     : new Date();
 
-  const formatter = new Intl.DateTimeFormat("en", {
-    month: "short",
-    year: "numeric",
-  });
-
-  const durationRangeParts = [];
-
-  durationRangeParts.push(`${formatter.format(start)}`);
-  durationRangeParts.push("-");
-  durationRangeParts.push(`${experience.endDate ? formatter.format(end) : "Present"}`);
-
-  const durationRange = durationRangeParts.join(" ");
+  const durationRange = `${monthYearFormatter.format(start)} - ${
+    experience.endDate
+      ? monthYearFormatter.format(end)
+      : "Present"
+  }`;
 
   const totalMonths =
     (end.getFullYear() - start.getFullYear()) * 12 +
     (end.getMonth() - start.getMonth()) +
     1;
 
-  const splitMonths = (totalMonths % 12)
-  const years = (totalMonths - splitMonths) / 12
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
 
   const durationParts = [];
 
-  if (years > 0) {
+  if (years > 0)
     durationParts.push(`${years} ${years === 1 ? "yr" : "yrs"}`);
-  }
 
-  if (splitMonths > 0) {
-    durationParts.push(`${splitMonths} ${splitMonths === 1 ? "mo" : "mos"}`);
-  }
+  if (months > 0)
+    durationParts.push(`${months} ${months === 1 ? "mo" : "mos"}`);
 
   const duration = durationParts.join(" ");
 
