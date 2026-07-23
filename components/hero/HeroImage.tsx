@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { profile } from "@/data/profile";
-import SkillBadge from "@/components/skills/SkillBadge";
 import HeroSocial from "./HeroSocial";
 
 export default function HeroImage() {

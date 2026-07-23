@@ -1,5 +1,5 @@
 import { SkillCategory as SkillCategoryType } from "@/types/skill";
-import SkillBadge from "./SkillBadge";
+import Badge from "@/components/ui/Badge";
 
 interface Props {
   category: SkillCategoryType;
@@ -33,7 +33,7 @@ export default function SkillCategory({ category }: Props) {
 
       <div className="mt-6 flex flex-wrap gap-3">
         {category.skills.map((skill) => (
-          <SkillBadge
+          <Badge
             key={skill}
             skill={skill}
           />

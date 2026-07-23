@@ -9,7 +9,7 @@ import {
 } from "@tabler/icons-react";
 
 import { Project } from "@/types/project";
-import SkillBadge from "@/components/skills/SkillBadge";
+import Badge from "@/components/ui/Badge";
 import { cn } from "@/libs/utils"
 
 interface Props {
@@ -108,14 +108,14 @@ export default function ProjectCard({
 
         <div className="mt-6 flex flex-wrap gap-2">
           {project.technologies.slice(0, 2).map((tech) => (
-            <SkillBadge
+            <Badge
               key={tech}
               skill={tech}
             />
           ))}
 
           {project.technologies.length > 4 && (
-            <SkillBadge
+            <Badge
               skill={`+${project.technologies.length - 4}`}
             />
           )}

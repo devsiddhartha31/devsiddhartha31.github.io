@@ -1,6 +1,6 @@
 import HeroButtons from "./HeroButtons";
 import { profile } from "@/data/profile";
-import SkillBadge from "@/components/skills/SkillBadge";
+import Badge from "@/components/ui/Badge";
 
 export default function HeroContent() {
   return (
@@ -36,7 +36,7 @@ export default function HeroContent() {
       {/* Info */}
       <div className="mt-8 flex flex-wrap gap-2">
         {profile.focus.map((item) => (
-          <SkillBadge key={item} skill={item} />
+          <Badge key={item} skill={item} />
         ))}
       </div>
 

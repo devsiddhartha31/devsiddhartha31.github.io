@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import SkillBadge from "@/components/skills/SkillBadge";
+import Badge from "@/components/ui/Badge";
 import { ChevronDown } from "lucide-react";
 
 import {
@@ -214,7 +214,7 @@ export default function ExperienceCard({
         <div className="mt-6 flex flex-wrap gap-2">
 
           {experience.technologies.map((tech) => (
-            <SkillBadge
+            <Badge
               key={tech}
               skill={tech}
             />
