@@ -170,14 +170,14 @@ export default function ExperienceCard({
       </div>
 
       {/* Duration and location */}
-      <div className="mt-6 flex flex-wrap items-center gap-3 md:gap-5 text-sm text-zinc-500">
+      <div className="mt-6 grid grid-cols-3 gap-3 text-sm text-zinc-500 md:flex md:flex-wrap md:items-center md:gap-5">
 
         <div className="flex items-center gap-2">
           <Icon size={16} />
           <span>{formatString(experience.employmentType)}</span>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="col-span-2 flex items-center gap-2 md:col-auto">
           <Calendar size={16} />
           <span>{workDurationFormatted.durationRange}</span>
         </div>
