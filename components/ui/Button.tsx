@@ -17,6 +17,9 @@ const variants = {
 
   ghost:
     "text-zinc-300 hover:bg-zinc-800 hover:text-white",
+
+  pill:
+    "rounded-full bg-indigo-500 text-white",
 };
 
 const sizes = {
