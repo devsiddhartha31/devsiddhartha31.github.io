@@ -19,7 +19,7 @@ export default function Footer() {
 
           {/* Navigation */}
 
-          <div className="grid w-full gap-10 md:grid-cols-3">
+          <div className="grid w-full grid-cols-3">
 
             <div>
 
@@ -131,10 +131,14 @@ export default function Footer() {
 
         {/* Bottom */}
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/5 pt-6 text-sm text-zinc-500 md:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/5 pt-6 text-sm text-zinc-500">
 
           <p>
             {footer.copyright}
+          </p>
+
+          <p>
+            {footer.updated}
           </p>
 
         </div>
