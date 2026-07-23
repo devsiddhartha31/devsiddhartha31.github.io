@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import Image from "next/image";
 
 import { Project } from "@/types/project";
 
@@ -58,9 +59,11 @@ export default function ProjectPreviewModal({
 
         </div>
 
-        <img
+        <Image
           src={project.image}
           alt={project.title}
+          width={1280}
+          height={720}
           className="h-72 w-full object-cover"
         />
 
