@@ -1,15 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import {
   ArrowUpRight,
 } from "lucide-react";
 
-import {
-  IconBrandGithub,
-} from "@tabler/icons-react";
-
 import { Project } from "@/types/project";
-import Badge from "@/components/ui/Badge";
 import { cn } from "@/libs/utils"
 
 interface Props {
@@ -103,53 +97,6 @@ export default function ProjectCard({
         <p className="mt-4 flex-1 text-sm leading-7 text-zinc-400 line-clamp-4">
           {project.description}
         </p>
-
-        {/* Tech
-
-        <div className="mt-6 flex flex-wrap gap-2">
-          {project.technologies.slice(0, 2).map((tech) => (
-            <Badge
-              key={tech}
-              skill={tech}
-            />
-          ))}
-
-          {project.technologies.length > 4 && (
-            <Badge
-              skill={`+${project.technologies.length - 4}`}
-            />
-          )}
-        </div> */}
-
-        {/* Footer
-
-        <div className="mt-8 flex items-center gap-4">
-
-          {project.github && (
-            <Link
-              href={project.github}
-              target="_blank"
-            >
-              <IconBrandGithub
-                size={18}
-                className="text-zinc-500 transition hover:text-white"
-              />
-            </Link>
-          )}
-
-          {project.demo && (
-            <Link
-              href={project.demo}
-              target="_blank"
-              className="flex items-center gap-2 text-sm font-medium text-indigo-400 transition hover:text-indigo-300"
-            >
-              Live Demo
-
-              <ArrowUpRight size={16} />
-            </Link>
-          )}
-
-        </div>*/}
 
       </div>
 
