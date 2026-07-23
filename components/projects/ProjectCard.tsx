@@ -153,7 +153,7 @@ export default function ProjectCard({
 
       </div>
 
-      <div className="mb-6 text-center text-sm font-medium text-zinc-400 transition-colors hover:text-white">
+      <div className="border-t border-white/10 p-4 text-center text-sm font-medium text-zinc-400 transition-colors hover:text-white">
         <div className="flex items-center justify-center gap-2">
           <span>
             View Details
