@@ -136,11 +136,11 @@ export default function ExperienceCard({
 
           <div>
 
-            <h3 className="text-xl font-bold">
+            <h3 className="text-lg md:text-xl font-bold">
               {experience.company}
             </h3>
 
-            <p className="mt-1 text-zinc-400">
+            <p className="mt-1 text-sm md:text-base text-zinc-400">
               {experience.role}
             </p>
 
@@ -163,7 +163,7 @@ export default function ExperienceCard({
       </div>
 
       {/* Duration and location */}
-      <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-zinc-500">
+      <div className="mt-6 flex flex-wrap items-center gap-3 md:gap-5 text-sm text-zinc-500">
 
         <div className="flex items-center gap-2">
           <Icon size={16} />
