@@ -45,6 +45,14 @@ export function formatDuration(experience: ExperienceItem) {
     year: "numeric",
   });
 
+  const durationRangeParts = [];
+
+  durationRangeParts.push(`${formatter.format(start)}`);
+  durationRangeParts.push("-");
+  durationRangeParts.push(`${experience.endDate ? formatter.format(end) : "Present"}`);
+
+  const durationRange = durationRangeParts.join(" ");
+
   const totalMonths =
     (end.getFullYear() - start.getFullYear()) * 12 +
     (end.getMonth() - start.getMonth()) +
@@ -65,9 +73,10 @@ export function formatDuration(experience: ExperienceItem) {
 
   const duration = durationParts.join(" ");
 
-  return `${formatter.format(start)} – ${
-    experience.endDate ? formatter.format(end) : "Present"
-  }${duration ? ` (${duration})` : ""}`;
+  return {
+    durationRange: durationRange,
+    duration: duration,
+  };
 }
 
 export default function ExperienceCard({
@@ -84,6 +93,8 @@ export default function ExperienceCard({
     .toUpperCase();
 
   const Icon = employmentTypeMap[experience.employmentType];
+
+  const workDurationFormatted = formatDuration(experience);
 
   return (
     <article
@@ -161,7 +172,12 @@ export default function ExperienceCard({
 
         <div className="flex items-center gap-2">
           <Calendar size={16} />
-          <span>{formatDuration(experience)}</span>
+          <span>{workDurationFormatted.durationRange}</span>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <Clock3 size={16} />
+          <span>{workDurationFormatted.duration}</span>
         </div>
 
         <div className="flex items-center gap-2">
