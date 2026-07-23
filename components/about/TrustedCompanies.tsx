@@ -24,7 +24,7 @@ export default function TrustedCompanies() {
               alt={company.name}
               width={140}
               height={48}
-              className="h-10 w-auto opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+              className="h-10 w-auto opacity-60 md:grayscale transition-all duration-300 hover:opacity-100 md:hover:grayscale-0"
             />
           );
 

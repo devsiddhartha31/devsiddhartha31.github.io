@@ -1,6 +1,6 @@
 import HeroButtons from "./HeroButtons";
 import { profile } from "@/data/profile";
-import SkillBadge from "@/components/skills/SkillBadge";
+import Badge from "@/components/ui/Badge";
 
 export default function HeroContent() {
   return (
@@ -19,7 +19,7 @@ export default function HeroContent() {
 
       </div>
 
-      <h1 className="mt-4 max-w-4xl text-2xl lg:text-4xl xl:text-5xl font-black leading-[1.1] tracking-tight">
+      <h1 className="mt-4 max-w-4xl text-3xl md:text-4xl xl:text-5xl font-black leading-[1.1] tracking-tight">
 
         Engineering software
 
@@ -36,17 +36,20 @@ export default function HeroContent() {
       {/* Info */}
       <div className="mt-8 flex flex-wrap gap-2">
         {profile.focus.map((item) => (
-          <SkillBadge key={item} skill={item} />
+          <Badge key={item} skill={item} />
         ))}
       </div>
 
-      <p className="mt-6 max-w-xl text-lg text-zinc-300 leading-8">
+      <p className="mt-6 max-w-xl text-base md:text-lg text-zinc-300 leading-8">
 
         {profile.description}
 
       </p>
 
-      <HeroButtons />
+      {/*Only for Desktop*/}
+      <div className="hidden md:block">
+        <HeroButtons />
+      </div>
 
     </div>
   );

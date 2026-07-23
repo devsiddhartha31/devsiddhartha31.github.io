@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -15,8 +15,12 @@ import ProjectPreviewModal from "./ProjectPreviewModal";
 
 export default function Projects() {
   const [activeStatusFilter, setActiveStatusFilter] = useState("enterprise");
-  const featuredProjects = projects.filter((project) => project.featured);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const featuredProjects = useMemo(
+    () => projects.filter((project) => project.featured),
+    []
+  );
 
   const statusFilters = useMemo(() => [
     "All",
@@ -40,12 +44,33 @@ export default function Projects() {
       : filteredProjects
     ).filter((project) => project.preview);
 
+  const getPreviewProjects = (filter: string) =>
+    featuredProjects.filter(
+      (project) =>
+        project.preview &&
+        (filter === "All" ||
+          project.status.toLowerCase() === filter.toLowerCase())
+    );
+
   const openProject = (project: Project) => {
     setSelectedProject(project);
   };
 
   const closeProject = () => {
     setSelectedProject(null);
+  };
+
+  const handleStatusFilterChange = (filter: string) => {
+    const nextPreviewProjects = getPreviewProjects(filter);
+
+    if (
+      selectedProject &&
+      !nextPreviewProjects.some((p) => p.id === selectedProject.id)
+    ) {
+      closeProject();
+    }
+
+    setActiveStatusFilter(filter);
   };
 
   const previousProject = () => {
@@ -76,15 +101,6 @@ export default function Projects() {
     setSelectedProject(next);
   };
 
-  useEffect(() => {
-    if (
-      selectedProject &&
-      !previewProjects.some((p) => p.id === selectedProject.id)
-    ) {
-      closeProject();
-    }
-  }, [previewProjects, selectedProject]);
-
   return (
     <Section id="projects">
       <Container>
@@ -97,7 +113,7 @@ export default function Projects() {
         <ProjectFilters
           filters={statusFilters}
           active={activeStatusFilter}
-          onChange={setActiveStatusFilter}
+          onChange={handleStatusFilterChange}
         />
 
         <ProjectCarousel

@@ -1,15 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import {
   ArrowUpRight,
 } from "lucide-react";
 
-import {
-  IconBrandGithub,
-} from "@tabler/icons-react";
-
 import { Project } from "@/types/project";
-import SkillBadge from "@/components/skills/SkillBadge";
 import { cn } from "@/libs/utils"
 
 interface Props {
@@ -94,63 +88,29 @@ export default function ProjectCard({
 
         {/* Title */}
 
-        <h3 className="mt-5 text-2xl font-bold">
+        <h3 className="mt-5 text-xl md:text-2xl font-bold">
           {project.title}
         </h3>
 
         {/* Description */}
 
-        <p className="mt-4 flex-1 text-sm leading-7 text-zinc-400 line-clamp-3">
+        <p className="mt-4 flex-1 text-sm leading-7 text-zinc-400 line-clamp-4">
           {project.description}
         </p>
 
-        {/* Tech */}
+      </div>
 
-        <div className="mt-6 flex flex-wrap gap-2">
-          {project.technologies.slice(0, 4).map((tech) => (
-            <SkillBadge
-              key={tech}
-              skill={tech}
-            />
-          ))}
+      <div className="border-t border-white/10 p-4 text-center text-sm font-medium text-zinc-400 transition-colors hover:text-white">
+        <div className="flex items-center justify-center gap-2">
+          <span>
+            View Details
+          </span>
 
-          {project.technologies.length > 4 && (
-            <SkillBadge
-              skill={`+${project.technologies.length - 4}`}
-            />
-          )}
+          <ArrowUpRight
+            size={16}
+            className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          />
         </div>
-
-        {/* Footer */}
-
-        <div className="mt-8 flex items-center gap-4">
-
-          {project.github && (
-            <Link
-              href={project.github}
-              target="_blank"
-            >
-              <IconBrandGithub
-                size={18}
-                className="text-zinc-500 transition hover:text-white"
-              />
-            </Link>
-          )}
-
-          {project.demo && (
-            <Link
-              href={project.demo}
-              target="_blank"
-              className="flex items-center gap-2 text-sm font-medium text-indigo-400 transition hover:text-indigo-300"
-            >
-              Live Demo
-
-              <ArrowUpRight size={16} />
-            </Link>
-          )}
-
-        </div>
-
       </div>
     </article>
   );

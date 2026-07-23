@@ -27,9 +27,9 @@ export default function ImpactCard({ item }: Props) {
   return (
     <article
       className={cn(
-        "group rounded-3xl border border-zinc-800 bg-zinc-900/60 p-8 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500/40 hover:shadow-xl hover:shadow-indigo-500/10",
-        item.size === "span-c2-r1" && "lg:col-span-2",
-        item.size === "span-c1-r2" && "lg:row-span-2"
+        "group rounded-3xl border border-zinc-800 bg-zinc-900/60 p-6 md:p-8 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500/40 hover:shadow-xl hover:shadow-indigo-500/10",
+        item.size === "span-c2-r1" && "col-span-2",
+        item.size === "span-c1-r2" && "md:row-span-2"
       )}
     >
       <Icon
@@ -37,11 +37,11 @@ export default function ImpactCard({ item }: Props) {
         className="text-indigo-400 transition-transform duration-300 group-hover:scale-110"
       />
 
-      <h3 className="mt-6 text-5xl font-black">
+      <h3 className="mt-6 text-4xl md:text-5xl font-black">
         {item.value}
       </h3>
 
-      <h4 className="mt-3 text-xl font-semibold">
+      <h4 className="mt-3 text-lg md:text-xl font-semibold">
         {item.title}
       </h4>
 

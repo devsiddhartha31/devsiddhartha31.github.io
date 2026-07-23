@@ -9,7 +9,7 @@ export default function SectionTitle({
 }: Props) {
   return (
     <div className="mb-10">
-      <h2 className="text-4xl font-bold">
+      <h2 className="text-3xl md:text-4xl font-bold">
         {title}
       </h2>
 

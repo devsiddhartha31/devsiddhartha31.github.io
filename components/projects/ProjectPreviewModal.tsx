@@ -1,8 +1,11 @@
 "use client";
 
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import Image from "next/image";
 
 import { Project } from "@/types/project";
+
+import Button from "@/components/ui/Button";
 
 interface Props {
   project: Project | null;
@@ -27,23 +30,40 @@ export default function ProjectPreviewModal({
       >
         <div className="absolute right-5 top-5 flex gap-2">
 
-          <button onClick={onPrevious} className="rounded-full border border-white/20 bg-black/50 p-2 text-white backdrop-blur-md transition hover:bg-indigo-600">
-            <ChevronLeft size={18} />
-          </button>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={onPrevious}
+            className="rounded-full border border-white/20 bg-black/50 text-white backdrop-blur-md hover:bg-indigo-600"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </Button>
 
-          <button onClick={onNext} className="rounded-full border border-white/20 bg-black/50 p-2 text-white backdrop-blur-md transition hover:bg-indigo-600">
-            <ChevronRight size={18} />
-          </button>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={onNext}
+            className="rounded-full border border-white/20 bg-black/50 text-white backdrop-blur-md hover:bg-indigo-600"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </Button>
 
-          <button onClick={onClose} className="rounded-full border border-white/20 bg-black/50 p-2 text-white backdrop-blur-md transition hover:bg-red-500">
-            <X size={18} />
-          </button>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={onClose}
+            className="rounded-full border border-white/20 bg-black/50 text-white backdrop-blur-md hover:bg-red-500"
+          >
+            <X className="h-5 w-5" />
+          </Button>
 
         </div>
 
-        <img
+        <Image
           src={project.image}
           alt={project.title}
+          width={1280}
+          height={720}
           className="h-72 w-full object-cover"
         />
 

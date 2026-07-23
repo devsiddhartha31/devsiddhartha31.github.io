@@ -1,11 +1,9 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { Project } from "@/types/project";
 
+import Button from "@/components/ui/Button";
 import ProjectCard from "./ProjectCard";
 
 interface Props {
@@ -21,42 +19,23 @@ export default function ProjectCarousel({
     loop: true,
   });
 
-  const [currentSlideIndex, setCurrentSlide] = useState(0);
-  const slideCount = projects.length;
-
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    const updateCarousel = () => {
-      setCurrentSlide(emblaApi.selectedScrollSnap())
-    };
-
-    updateCarousel();
-
-    emblaApi.on("select", updateCarousel);
-    emblaApi.on("reInit", updateCarousel);
-
-    return () => {
-      emblaApi.off("select", updateCarousel);
-      emblaApi.off("reInit", updateCarousel);
-    };
-  }, [emblaApi]);
-
   return (
     <div className="mt-12">
 
       <div className="min-w-14 text-center text-sm font-medium tabular-nums text-zinc-400">
-        {slideCount} {(slideCount > 1) ? "Projects" : "Project"}
+        {projects.length} {(projects.length > 1) ? "Projects" : "Project"}
       </div>
 
       <div className="mt-8 flex items-center justify-center gap-4">
 
-        <button
+        <Button
+          variant="ghost"
+          size="icon"
           onClick={() => emblaApi?.scrollPrev()}
-          className="rounded-full border border-zinc-700 p-3 text-zinc-400 transition-all hover:border-indigo-500 hover:text-white"
+          className="rounded-full border border-zinc-700 text-zinc-400 hover:border-indigo-500"
         >
-          <ChevronLeft size={18} />
-        </button>
+          <ChevronLeft className="h-5 w-5" />
+        </Button>
 
         <div
           className="overflow-hidden"
@@ -68,8 +47,8 @@ export default function ProjectCarousel({
                 key={project.id}
                 className={
                   projects.length === 1
-                    ? "mx-auto max-w-md flex-[0_0_100%] px-3"
-                    : "min-w-0 flex-[0_0_100%] px-3 md:flex-[0_0_50%] xl:flex-[0_0_33.333%]"
+                    ? "mx-auto max-w-md flex-[0_0_100%] md:px-3"
+                    : "min-w-0 flex-[0_0_100%] md:px-3 md:flex-[0_0_50%] xl:flex-[0_0_33.333%]"
                 }
               >
                 <ProjectCard
@@ -81,12 +60,14 @@ export default function ProjectCarousel({
           </div>
         </div>
 
-        <button
+        <Button
+          variant="ghost"
+          size="icon"
           onClick={() => emblaApi?.scrollNext()}
-          className="rounded-full border border-zinc-700 p-3 text-zinc-400 transition-all hover:border-indigo-500 hover:text-white"
+          className="rounded-full border border-zinc-700 text-zinc-400 hover:border-indigo-500"
         >
-          <ChevronRight size={18} />
-        </button>
+          <ChevronRight className="h-5 w-5" />
+        </Button>
 
       </div>
     </div>
