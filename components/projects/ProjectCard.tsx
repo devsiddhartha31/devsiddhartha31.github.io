@@ -152,6 +152,19 @@ export default function ProjectCard({
         </div>*/}
 
       </div>
+
+      <div className="mb-6 text-center text-sm font-medium text-zinc-400 transition-colors hover:text-white">
+        <div className="flex items-center justify-center gap-2">
+          <span>
+            View Details
+          </span>
+
+          <ArrowUpRight
+            size={16}
+            className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          />
+        </div>
+      </div>
     </article>
   );
 }
